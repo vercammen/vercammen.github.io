@@ -1,65 +1,93 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
 
-	<head>
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
 
-		
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
 
-		<!-- link to main stylesheet -->
+.tablink:hover {
+  background-color: #777;
+}
 
-        <link rel="stylesheet" type="text/css" href="/css/main.css">
-        
-        <style>
-                img {
-                  display: block;
-                  margin-left: auto;
-                  margin-right: auto;
-                }
-        </style>
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
 
-	</head>
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
 
-	<body>
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-		
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
 
-        <p style="text-align: center;"><span style="color: #800080; font-size: 18pt;">Welcome to FRE 501!</span></p>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
 
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
 
-        <div class=figure>
-            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/front_page_banner_cropped.jpg"
-                  width="782" height="142"
-                  alt="Front Page Banner" 
-                  class="center">
-            <p>
-        </div>
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
 
-        <div id="wiki_body" class="user_content enhanced" style="text-align: center;"><span style="font-size: 14pt;">Please see the 
-		
-		<a href="module1_A.html">Course Outline</a>
-    
-        </a> for basic information about this course and the <a title="Course Topics and Activities" href="https://canvas.ubc.ca/courses/27594/pages/course-topics-and-activities" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/pages/course-topics-and-activities" data-api-returntype="Page">Course Topics and Activities</a> 
-        
-        for detailed information about the course work flow</span><span style="font-size: 14pt;">.</span></div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
 
-        <div class="user_content enhanced" style="text-align: center;"></div>
-        
-        <div class="user_content enhanced" style="text-align: center;"><span style="font-size: 14pt;">The course content is divided into the four (4) Modules below. </span><br /><span style="font-size: 14pt;">(Click on <em>TEXT</em> or <em>IMAGE</em> to enter a module.)</span></div>
-
-        <p style="text-align: center;"><br /><a title="Module 1: Commodity Futures Markets" href="https://canvas.ubc.ca/courses/27594/modules/150562" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/modules/150562" data-api-returntype="Module"><img src="https://canvas.ubc.ca/courses/27594/files/3849456/download" alt="Icon_module1.jpg" width="269" height="99" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/files/3849456" data-api-returntype="File" /></a></p>
-
-        <p style="text-align: center;"><a title="Module 2: Commodity Options" href="https://canvas.ubc.ca/courses/27594/modules/150563" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/modules/150563" data-api-returntype="Module"><img src="https://canvas.ubc.ca/courses/27594/files/3849457/download" alt="Icon_module2.jpg" width="273" height="99" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/files/3849457" data-api-returntype="File" /></a></p>
-
-        <p style="text-align: center;"><a title="Module 3: Industrial Organization" href="https://canvas.ubc.ca/courses/27594/modules/150564" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/modules/150564" data-api-returntype="Module"><img src="https://canvas.ubc.ca/courses/27594/files/3849458/download" alt="icon_module3.jpg" width="275" height="100" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/files/3849458" data-api-returntype="File" /></a></p>
-
-        <p style="text-align: center;"><a title="Module 4: Trade Data Analytics" href="https://canvas.ubc.ca/courses/27594/modules/150565" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/modules/150565" data-api-returntype="Module"><img src="https://canvas.ubc.ca/courses/27594/files/3849459/download" alt="icon_module4.jpg" width="277" height="102" data-api-endpoint="https://canvas.ubc.ca/api/v1/courses/27594/files/3849459" data-api-returntype="File" /></a></p>
-        <p>&nbsp;</p>
-
-
-
-
-
-	</body>
-
-</html>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
