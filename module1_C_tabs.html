@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css">
+        .boxed {
+            border: 1px solid green ;
+            width: 450px;
+        }
+    </style>
+    <style>
+        p, li {max-width: 45em;}
+    </style>
+
+
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  /*color: white;*/
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Tab1 {background-color: white;}
+#Tab2 {background-color: white;}
+#Tab3 {background-color: white;}
+#Tab4 {background-color: white;}
+#Tab5 {background-color: white;}
+</style>
+</head>
+
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<body>
+        <h4 style="color:red;">Return to <a href="module1_select_page.html">Module Learning Outcomes</a> </h4>
+        <h2 style="color:green;">Module 1, Section C: Relationship Between Spot and Futures Prices</h2>
+
+<button class="tablink" onclick="openPage('Tab1', this, 'red')"id="defaultOpen">Main Content</button>
+<button class="tablink" onclick="openPage('Tab2', this, 'green')">Assign Questions</button>
+<button class="tablink" onclick="openPage('Tab3', this, 'blue')">Quiz Prep Questions</button>
+<button class="tablink" onclick="openPage('Tab4', this, 'orange')">Readings</button>
+<button class="tablink" onclick="openPage('Tab5', this, 'purple')">Appendix</button>
+
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+
+<div id="Tab1" class="tabcontent">
+
+    <h1 style="color:purple;">Main Content</h1>
+
+    <h2 style="color:green;">Index</h2>
+
+    <ul>
+            <li><a href="#a001">Jump to SubSection (i): Theoretical Concepts </a></li>
+            <li><a href="#a002">Jump to SubSection (ii): Modeling Assumptions</a></li>
+            <li><a href="#a003">Jump to SubSection (iii): Simulation Results</a></li>
+        </ul>
+    
+      <p>Module 1.B focused on a generic market that treated futures and spot prices as equivalent. In real world markets futures and spot prices track each other but not perfectly. Understanding the relationship between futures and spot prices is crucial for understanding price risk management (i.e., hedging), which is the topic of the next module. In the first section of this module the theoretical link between futures and spot prices are examined. The middle section lays out the assumptions which are used to incorporate futures trading and regional spot markets into the simulation model that was constructed in Module 1.B. The final section of this module presents the simulation results which illustrate how futures and spot prices are connected over time and space.</p>
+      
+      <h3 style="color:rgb(128, 0, 0);"><a name="a001"></a>(i) Theoretical Concepts</h3>
+    
+      <p>The two most important theoretical relationships which describe the link between futures and spot prices are the basis and the price expectations which define the forward curve. Each of these are discussed in turn. 
+      </p>
+      <hr align="left" width="50%">
+       
+    <blockquote><font size="4">Basis Defined</font> </blockquote>
+      
+      <p>
+      The main link between futures prices and spot prices is the basis. The basis is defined as the spot price minus the futures price. Each spot market has its own basis, and it is necessary to define the futures contract (e.g., December, 2019) when specifying a value for the basis. The value of the basis varies over space because the spot price in a particular region depends on the cost of transporting the commodity to market. The value of the basis varies over time because as time progresses the cost of carrying the commodity until the expiry of the futures contract changes. </p> 
+    
+      <p>Suppose the basis is measured at time t in spot market X using a futures contract that expires at time T and has Chicago as its delivery option. The basis in this market consists of an adjustment for location plus the cost of carrying the commodity from time t until time T. The adjustment for location is the spot price in region X minus the spot price in Chicago. This spot price difference will vary over time with a seasonal component and a stationary random component. The simplest case is when the commodity is shipped from region X to Chicago for export because in this case the adjustment for location is the cost of transporting the commodity from region X to Chicago multiplied by -1.</p>
+    
+      <br /> 
+      <br /> 
+      
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p> Basis = Spot Price - Futures Price</p>        
+                 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Adjustment for Location - Carrying Cost </p>           
+            </div>
+            </div>
+            
+        <p>
+          
+          For agricultural commodities such as corn for which the futures contract has Chicago as the delivery location the basis in the Chicago spot market is equal to the carrying cost. Moreover, as the futures contract approaches its expiry date, the carrying cost approaches zero, which means that for the Chicago market the spot price and futures price converge as the expiry of the contract approaches.
+    </p>
+    <br />
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p> Convergence Propery: The Chicago spot price and the price of a futures contract that is about to expire should be approximately equal.</p>           
+        </div>
+        </div>
+        <p>
+        The Convergence property is very important because it provides a precise connection between futures and spot prices. Suppose the futures price was above the Chicago spot price when the futures contract was expiring. An agent of riskless arbitrage would take a short position in the futures market, purchase the commodity in the Chicago spot market and then deliver the commodity to fulfill the requirements of the short futures position. If instead the futures price was below the Chicago spot price, the agent would take a long futures position, accept delivery of the commodity to fulfill the requirements of the long position and then sell the commodity in the spot price. This type of arbitrage activity would cause the futures and spot prices to adjust until convergence is achieved and arbitrage profits vanish.   </p>
+        
+        <p>The component of the basis that accounts for the spot market location depends on whether or not there is a transportation link between the spot market and the Chicago market. If there is a transportation link then the adjustment is simply the transportation cost between the spot market and the Chicago market. If there is no transportation link then the location component of the basis is more complex. In this module we will assume that the commodity is exported through the U.S. Gulf Coast. In this case the adjustment for location accounts for the cost of transporting the commodity to the export location and the difference in the spot prices at the Gulf Coast and Chicago.  
+        </p>
+        <br/>
+    
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">       
+                 <p> Basis = <i>Adjustment for Location</i> - Carrying Cost </p> 
+                 <p>Case 1: Transportation Link Between Local Market and Chicago</p>
+                    <li> <i>Adjustment for Location</i> = -(Transportation Cost Between Local Market and Chicago)</li>
+    
+                 <p>Case 2: Transportation Link Between Local Market and Gulf Coast </p>
+                  <li><i>Adjustment for Location</i> = (Gulf Coast Spot Price - Chicago Spot Price) - (Transportation Cost from Local Market to Gulf Coast)  </li>         
+            </div>
+            </div>
+    <p>The carrying cost and location components of the basis, and the convergence of the spot and futures price in Chicago are illustrated in Figure 1-C-1. Notice that the expected spot price rises over time according to the change in the carrying cost. The futures price is not expected to change over time given the information that is available on September 15.
+    </p>
+    <br/>
+            <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/spot_futures_converge.jpg"
+                  width="641" height="400"
+                  alt="FIGURE 1-C-1">
+                <p>Figure 1-C-1: Convergence of Spot and Futures Price Over Time
+              </div>
+    
+        <p>
+          <hr align="left" width="50%">
+            <blockquote><font size="4">Basis Measured</font> </blockquote>
+        </p>
+        
+        <p>Case 2 in the previous text box is common because the Chicago export market is small in comparison to the Gulf Coast export market. For spot markets that are relatively far from (close to) the Gulf Coast the adjustment for location takes on a negative (positive) value. The carrying cost component of the basis is generally negative, which implies that the basis takes on a negative value unless the spot market is close to the Gulf Coast and the positive-valued location adjustment more than offsets the carrying cost.
+        </p> 
+        <p> The results concerning the sign of the basis for Case 2 corn are illustrated in Table 1-C-1. Southern Iowa and St. Louis are both located near the Mississippi River and thus both export corn through the Gulf Coast. Southern Iowa is expected to have a negative basis and St. Louis is expected to have a positive basis for corn because the former is relatively far from the Gulf Coast and the latter is relatively close. The corn basis for southern Iowa ranges from a low of -$0.21/bu to a high of -$0.17/bu. The corn basis for St. Louis ranges from a low of $0.2075/bu to a high of $0.2775/bu. Both of these quotes assumes a September futures contract for corn, as indicated by the "U" symbol. If these basis quotes are added to the September futures price of $4.5425/bu the local market corn cash prices emerge: $4.3325 - $4.3725 for southern Iowa and $4.7500 - $4.8200 for St. Louis.</p>
+    <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/usda_basis.jpg"
+              width="900" height="260"
+              alt="FIGURE 1-C-1">
+            <p>Table 1-C-1: USDA Basis for Corn at south Iowa and St. Louis 
+          </div>
+    <br/>
+    
+        <p>Table 1-C-2 below is a table of historic basis levels for corn in Iowa -- see the
+        <a href="https://www.extension.iastate.edu/agdm/crops/pdf/a2-41.pdf" target="_blank">Ag Decision Maker </a> website. The basis for Iowa as a whole on a particular day in a particular year is defined as the average spot price throughout the many corn regions within Iowa minus the futures price for that particular day and year. The average value of this daily Iowa basis over the 2012/2013 - 2016/2017 marketing years is the basis value that is reported in Table 1-C-2.</p>
+            
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/04/corn_basis.jpg"
+                width="707" height="673"
+                alt="TABLE 1-C-2">
+            <p>TABLE 1-C-2: Historical State Average Corn Basis in Iowa
+        </div>
+                
+        <p>The data in Table 1-C-2 reveal a number of systematic patterns in the relationship between spot and futures prices. For example:
+        <br/>
+        <br/>
+        <div style="margin-left: 20px; margin-right: 500px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p> (A) In early December, the basis is more negative for contracts with a longer expiry date (e.g.,$-0.16 for December, $-0.24 for March, $-0.31 for May and $-0.35 for July) </p> 
+            <p> (B) For the July futures contract, the average basis generally becomes less negative as time passes between October and June. </p>
+            <p>(C) When the futures contract is nearing its expiry date (e.g., early December for the December contract, early March for the March contract, etc. ) the basis is approximately equal to the same value ($-0.20/bu) for the December, March, May and July contracts. </p>
+            <p>(D) The minimum value of the basis is almost always negative for a March contract and almost always positive for a July contract.    </p> 
+            </div>
+            </div>
+           <p> Within Table 1-C-2 Property A is expected because a longer expiry date implies a larger carrying cost. Property B is expected because spot prices are generally lowest during harvest and steadily increase after harvest. Property C is expected because of the convergence property of spot and futures prices (in this case the -$0.20 is a good estimate of the average location adjustment for Iowa). Property D is expected because spot prices tend to peak in July, which is a pre-harvest month.
+    
+           </p>       
+    
+          <hr align="left" width="50%">
+          <blockquote><font size="4">Price Expectations and the Forward Curve</font> </blockquote>
+    
+          <p>The second major link between futures prices and spot prices is price expectations and the forward curve. Prior to a futures contract expiring riskless arbitrage between the futures price and the spot price is not possible and so it is necessary for traders to form expectations about future spot prices. The two general categories of price expectations are unbiased (also referred to as normal) and biased. With normal price expectations, the equilibrium futures price at time t is the expected Chicago spot price at time T where T is the time that the futures contract expires. Biased price expectations come in two flavours. A market for which the futures price is biased down (up) is referred to normal backwardation (contango). Biased expectations will be examined in greater detail in the next module in the context of hedging. For the rest of this module assume that price expectations are normal.
+          </p>
+          <br />
+        
+          <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+              <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">       
+                   <p> Normal Price Expectations: Futures price at time t = Expected Chicago spot price when contract expires at time T</p> 
+                   <p> Figure 1-C-1 illustrates normal price expectations since there is no change in the expected futures price over time.</p> 
+                             
+              </div>
+            </div>
+    
+        <p>An important property of futures prices which has a strong connection to price expectations is the forward curve. This curve is the set of prices for all futures contracts that are trading at a given point in time. Table 1-C-3 shows the July 12, 2019 settle prices for the full set of CBOT corn contracts that span July, 2019 to July, 2021. The graph of these prices, which is the forward curve, is given by Figure 1-C-2. Normal price expectations implies that as of July 12, 2019, traders believed the Chicago spot price for corn in mid September when the September futures contract expires is $4.5425/bu. Similarly, traders believe the spot price for corn in mid December when the December futures contract expires is $4.5925/bu. And so forth.
+        </p>
+        <br/>
+        
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/cbot_settle_july12.jpg"
+              width="719" height="371"
+              alt="TABLE 1-C-3">
+            <p>TABLE 1-C-3: July 12, 2019 CBOT Corn Futures Prices 
+          </div>
+    
+        <p>The slope of the forward curve reveals the spreads in neighboring futures prices. For example, the spread between the September, 2019 and December, 2019 corn futures is 4.5925 - 4.5425 = $0.05/bu. With normal price expectations this spread in the pair of futures prices is equal to the spread between the expected mid September, 2019 Chicago spot price and the expected mid December, 2019 Chicago spot price. In the previous module the change in the expected spot price over time was due to the carrying cost. Thus, with normal price expectations there is direct link between the slope of the forward curve and expected carrying costs in the spot market.
+        </p>
+    <br/>
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">       
+                 <p> With normal price expectations, the slope of the forward curve is a measure of expected carrying costs in the Chicago spot market.</p> 
+                  
+            </div>
+          </div>
+    <br/>
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/cbot_forward_july12.jpg"
+          width="662" height="441"
+          alt="FIGURE 1-C-2">
+        <p>FIGURE 1-C-2: July 12, 2019 CBOT Corn Forward Curve 
+      </div>
+    
+        <p> Figure 1-C-2 reveals a sharp drop in the forward curve in September of 2020. Drawing on the theory that was developed in Module 2, one explanation is that the market will not stock out in 2019 and thus the price of corn will continue to rise throughout the 2019 harvest period. However, traders expect the market to stock out in 2020, which typically results in a price drop during the harvest season. In general, the forward curve for storable agricultural commodities slopes up outside of the harvest season due to the cost of storage. For example, Figure 1-C-3 shows that the forward curve for soybeans as of April 17, 2019 rises from a low of $8.7875/bu for the May, 2019 futures to a high of $9.4950/bu for the November, 2020 futures. In contrast, Figure 1-C-3 shows that the forward curve for crude oil is flat and even declines over the May, 2019 to November, 2020 time period.
+    
+        </p> 
+    
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/04/forward_soy_oil.jpg"
+              width="580" height="480"
+              alt="FIGURE 1-C-3">
+            <p>FIGURE 1-C-3: Forward Curves for Soybeans and Crude Oil
+          </div>
+    
+    
+      <h3 style="color:rgb(128, 0, 0);"><a name="a002"></a>(ii) Modeling Assumptions</h3>    
+    
+      <p>The purpose of this section is to describe the assumptions which are required to incorporate a futures market and regional spot prices into the simulation model that was constructed in the previous module. Prior to discussing these assumptions it is useful to first discuss in greater detail the concept of price discovery in futures and spot markets.</p>
+      
+      <hr align="left" width="50%">
+          <blockquote><font size="4">Price Discovery Revisited</font> </blockquote>
+        
+      <p>An important role of centralized trading of commodity futures is price discovery. With regional spot markets that have different prices due to differences in transportation costs to export markets it is important to ask which prices are being discovered by a commodity futures market. In the previous module it was shown how arbitrage in the market for storage leads to the efficient allocation of stocks and consumption over time. Imagine now the active arbitrage of prices across regional markets, which results in a spatial pricing equilibrium. Traders recognize this arbitrage activity over time and space, which means that implicitly the full set of spot prices across time and space are continually being discovered.</p>
+      
+      <p>It is not feasible to report all of the prices that are discovered over time and space. Instead, prices for select futures contracts with varying expiry dates are reported for one specific location -- typically Chicago. Spot prices in the various regional markets are then derived from one of the near-by futures prices by adding the basis which is specific to that region. The size of the basis changes continually over time and therefore is part of the price discovery process. For example, in Table 1-C-1 the spot prices for corn in the southern Iowa and St. Louis markets are derived by adding the current value of the regional basis to the September, 2019 futures price for corn. The idea that spot prices are derived from futures prices rather than vice versa may be confusing because a futures price is often referred to as a derivative price (e.g., see the <a href="https://www.investopedia.com/ask/answers/060315/how-price-derivative-determined.asp">Investopedia</a> entry for derivative pricing). This confusion can be set aside if one instead interprets the futures price as being derived from the market fundamentals which determine the full array of spot prices over time and space.
+      </p>
+      <hr align="left" width="50%">
+      <blockquote><font size="4">Assumptions to Extend Simulation Model</font> </blockquote>
+    
+      <p>For the purpose of the simulation model, assume that traders in the futures market are discovering the current and expected future spot price of corn at the Gulf Coast export location. In other words, the set of equilibrium spot prices that were simulated in the previous module are assumed to be the set of prices that emerge in the Gulf Coast export market. This is a reasonable assumption because as previously noted the Gulf Coast by far has the largest export share in the U.S. corn market. Also assume that the Chicago spot price is equal to the Gulf Coast spot price minus a discount, which depends on the season and level of stocks in the market. This is a strong assumption because in reality the Chicago market and the Gulf Coast market are serving different overseas customers and so the price difference across the two locations will be much more complex. With the Chicago spot price now specified it is straight forward to specify the set of futures prices in the simulation model. Indeed, the convergence property and normal price expectations assumption ensures that the futures price is equal to the expected Chicago spot price when the futures contract expires.</p>
+      
+      <p>As shown in the next Module, hedging effectiveness and hedging profits depends on how the basis changes over time. For this reason the determinants of the basis are emphasized in the next module. In this module the basis is calculated for both the Gulf Coast and Kansas City, which is a typical midwestrn city in the corn growing region of the U.S. Midwest that exports through the Gulf Coast. Similar to the Chicago spot price, the Kansas City spot price is assumed to equal the Gulf Coast spot price minus a discount, which depends on the season and level of stocks in the market. This assumption is quite reasonable because according to theory the discount should equal the cost of transporting the corn from Kansas City to the Gulf Coast using a combination of rail freight and a barge down the Mississippi River. Figure 1-C-4 shows the Mississippi River, the export elevators at the Gulf Coast and Chicago, and the Kansas City spot market.
+      </p>
+    
+      <br/>
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/map_spot.jpg"
+          width="523" height="496"
+          alt="FIGURE 1-C-4">
+        <p>FIGURE 1-C-4: Map Showing Gulf Coast, Chicago, Kansas City and Mississippi River.
+      </div>
+    
+      <p>The bottom chart in Figure 1-C-5 shows the monthly average real price of corn in the Gulf Coast export market for the period 1975 to 2019. This real price series was created by dividing the nominal price series by the producer price index for all agricultural commodities. The top chart in Figure 1-C-5 shows the price difference in the real price of corn for two pairs of locations: (1) The U.S. Gulf Coast and Chicago; and (2) Chicago and Kansas City. Note that the Kansas City spot price is generally lower than than the Chicago spot price, which implies a negative location adjustment when calculating the Kansas City basis. As will be shown in the next module, the variation in the price differences across the three markets directly affect the variation in hedging profits and thus the overall effectiveness of the hedge.  
+      </p>
+      <br/>
+      <div class=figure>
+          <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/export_price_compare.jpg"
+            width="615" height="760"
+            alt="FIGURE 1-C-5">
+          <p>FIGURE 1-C-5: Monthly Spot Price Differences: Gulf Coast, Chicago and Kansas City
+        </div>
+    
+    <hr align="left" width="50%">
+    <blockquote><font size="4">Estimation of Price Discount Functions</font> </blockquote>
+    <p>The purpose of this section is to estimate the Gulf Coast - Chicago and Gulf Coast - Kansas City price discounts for corn. The estimated price discounts are subtracted from the simulated Gulf Coast spot price in order to obtain simulated spot prices for Chicago and Kansas City. The Gulf Coast - Chicago price discount is an estimate of the average price difference across the two export markets. The Gulf Coast - Kansas City price discount is an estimate of the average cost of transporting corn from Kansas City to the Gulf Coast. Both discounts depend on the season and the level of seasonally-adjusted stocks.
+    </p>
+    
+    <p>The results are shown in Table 1-C-4. The column on the left is the Gulf Coast - Chicago discount and the column on the right is the Gulf Coast - Kansas City price discount. In each case the dependent variable is the deflated average quarterly spot price of corn in the Gulf Coast minus the deflated average monthly price of corn in the regional spot market. The explanatory variables include a dummy variable for the winter, spring and summer quarter, and a measure of seasonally-adjusted stocks. The dummy variable for the fall season is omitted which means that the coefficients on the three included seasonal dummies must be interpreted relative to the fall season. The negative values for the coefficients for the winter, spring and summer dummies implies for both Chicago and Kansas City that the price discount is smaller in the winter, spring and summer than it is in the fall. This result is expected because regions the Midwest have surplus production region and so the spot price in these regions tend to be lowest when stocks are highest in the fall season. The positive value on the Stock Residual variable is also expected because it reveals that the price discount is largest when stocks in the midwestern region are above their long-term average.</p>
+    
+    <br/>
+      <div class=figure>
+          <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/regression_results.jpg"
+            width="606" height="650"
+            alt="TABLE 1-C-4">
+          <p>TABLE 1-C-4: Estimation of Chicago and Kansas City Spot Price Discounts
+        </div>
+    
+      
+    <h3 style="color:rgb(128, 0, 0);"><a name="a003"></a>(iii) Simulation Results</h3>
+    
+    <p>The purpose of this section is to graphically display the simulated futures and spot prices, the simulated basis for the Gulf Coast and Kansas City and the simulated forward curve. To accomplish this the simulated spot prices from the previous module are assumed to equal the spot prices that are observed in the Gulf Coast market. The set of Chicago spot prices are then derived by adding to the Gulf Coast spot price the Gulf Coast - Chicago price discount that is implied by the left side regression in Table 1-C-4. Let F7 denote a futures contract that expires in Q7 (i.e., the third quarter of the second year). The F7 contract is priced using the expected Q7 spot price. The Gulf Coast spot price minus the F7 futures price gives the F7 basis for the Gulf Coast. The derivation of the Kansas City basis is analogous.
+    </p>
+    
+    <p>Recall from the construction of the simulation model in Module 1-B that with a 0.5 probability the year 2 harvest will be reduced by an amount L. In the low loss scenario, the market stocked out and in the high loss scenario stocks were carried over from year 1 to year 2. These two scenarios together with the two alternative markets for hedging (i.e., the Gulf Coast and Kansas City) imply that there are four possible scenarios to consider. Rather than presenting all four, the following combinations are featured. The first combination is the Gulf Coast market in a large loss (stock carry over) scenario, and the second combination is the Kansas City market in a small loss (stockout) scenario. The results for the two omitted scenarios are similar to the results for the two included scenarios. 
+    </p>
+    
+    <p>Figure 1-C-6 shows the simulation results for the Gulf Coast spot market. The potential for a large loss in the year 2 harvest implies that stocks are carried forward through time and the spot price rises continually over the 8 quarters. The spot prices for the first four quarters are given by the solid bars for Chicago and the light-shaded bars for the Gulf Coast. The columns for the last four quarters represent expected spot prices from the perspective of a decision maker in Q1 through Q4 (recall that the harvest in Q5 is uncertain). The difference in the heights of the dark and light shaded columns is a measure of the price discounts which are given by regression results in the left column of Table 1-C-4. The price of the F7 futures contract, which is given by the dark horizontal line, is equal to expected Chicago spot price in Q7. The expected Gulf Coast basis is the vertical difference between the Gulf Coast spot price and the F7 futures price. Notice that the expected basis is negative for Q2 and positive for Q3, Q4 and Q6. Moreover, the basis is increasing over time because the expected futures price remains constant whereas the expected spot price is rising due to the carrying cost. </p>
+    
+    <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/figure_basis_gulf.jpg"
+              width="686" height="415"
+              alt="FIGURE 1-C-6">
+            <p>FIGURE 1-C-6: Gulf Coast Basis and Forward Curve in a Large Loss Scenario
+        </div>
+    
+    <p>Figure 1-C-7 shows that same results as Figure 1-C-6 for the Kansas City spot market. The potential for a small loss in the year 2 harvest implies that the year 1 market stocks out and the spot price drops with the arrival of the year 2 harvest. Unlike the Gulf Coast market, the basis in the Kansas City market is universally negative. This outcome is expected because both the carrying charge and the location adjustment contribute toward a negative basis. Also unlike the Gulf Coast market the basis does not strictly increase over time. When the spot price drops in Q5 the basis jumps to a more negative value. As will be shown in the next module, hedging profits are significantly impacted when a market stocks out because of the potential for a large decrease in the basis.
+    </p>
+    
+    <br/>
+      <div class=figure>
+          <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/figure_basis_kansas.jpg"
+            width="686" height="415"
+            alt="FIGURE 1-C-7">
+          <p>FIGURE 1-C-7: Kansas City Basis and Forward Curve in a Small Loss Scenario
+        </div>
+    
+    <p>The solid curved line in Figures 1-C-6 and 1-C-7 is the forward curve. In the Gulf Coast market the forward curve is strictly upward sloping due to the carry over of stocks. A market with an upward sloping forward curve is commonly referred to as normal carrying cost market. In the Kansas City market the stock out results in a downward sloping portion and a negative price spread within the forward curve. A market with a negative price spread is commonly referred to as an inverted market. As previously noted, seasonally produced crops such as corn commonly have price inversions when stocks from a new harvest are expected.
+    </p>
+    
+    <br/>
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+    <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">       
+        <p> Normal Carrying Cost Market: The forward curve is upward sloping.</p> 
+        <p> Inverted Market: The forward curve has a downward sloping segment (i.e., a negative price spread).</p>      
+    </div>
+    </div>
+    
+    <h4 style="color:red;">Complete quiz preparation questions (Q25 - Q26) in the <i>Quiz Questions</i> tab.</h4>
+
+</div>
+
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+
+<div id="Tab2" class="tabcontent">
+
+  <h1 style="color:purple;">Assignment Questions</h1>
+
+  <p>Content for "Assign Questions"</p> 
+</div>
+
+
+
+
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+
+<div id="Tab3" class="tabcontent">
+
+  <h1 style="color:purple;">Quiz Prep Questions</h1>
+
+  <p>Content for "Quiz Prep Questions"</p>
+</div>
+
+
+
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+
+<div id="Tab4" class="tabcontent">
+
+  <h1 style="color:purple;">Readings</h1>
+
+  <p>Content for "Readings"</p>
+</div>
+
+
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+
+<div id="Tab5" class="tabcontent">
+
+        <h1 style="color:purple;">Appendix</h1>
+
+    <p>No Appendix for Module 1-C</p>
+  </div>
+
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
