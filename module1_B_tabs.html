@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <style type="text/css">
+            .boxed {
+                border: 1px solid green ;
+                width: 450px;
+            }
+        </style>
+        <style>
+            p, li {max-width: 45em;}
+        </style>
+
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  /*color: white;*/
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Tab1 {background-color: white;}
+#Tab2 {background-color: white;}
+#Tab3 {background-color: white;}
+#Tab4 {background-color: white;}
+#Tab5 {background-color: white;}
+</style>
+</head>
+
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<body>
+        <h4 style="color:red;">Return to <a href="module1_select_page.html">Module Learning Outcomes</a> </h4>
+
+        <h2 style="color:green;">Module 1, Section B: Pricing Relationships</h2>
+
+<button class="tablink" onclick="openPage('Tab1', this, 'red')"id="defaultOpen">Main Content</button>
+<button class="tablink" onclick="openPage('Tab2', this, 'green')">Assignment Questions</button>
+<button class="tablink" onclick="openPage('Tab3', this, 'blue')">Quiz Prep Questions</button>
+<button class="tablink" onclick="openPage('Tab4', this, 'orange')">Readings</button>
+<button class="tablink" onclick="openPage('Tab5', this, 'purple')">Appendix</button>
+
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+
+<div id="Tab1" class="tabcontent">
+    <h1 style="color:purple;">Main Content</h1>
+
+    <h2 style="color:green;">Index</h2>
+
+    <ul>
+        <li><a href="#a001">Jump to SubSection (i): Price Discovery </a></li>
+        <li><a href="#a002">Jump to SubSection (ii): Storage Dynamics and Seaonality</a></li>
+        <li><a href="#a003">Jump to Subsection (iii): Simulation Model</a></li>
+    </ul>
+        
+    <h3 style="color:rgb(128, 0, 0);"><a name="a001"></a>(i) Price Discovery</h3>
+        
+    <p>As noted in the previous module, an important role of commodity futures markets is price discovery. In an an attempt to earn profits, speculators trade commodity futures based on their knowledge and beliefs about current and future supply and demand conditions. The equilibrium futures prices that are reported and continually updated throughout the trading day reflect the aggregation of speculators' current knowledge and beliefs about market fundamentals.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Simple Example</font> </blockquote>
+    </p>
+
+    <p>The following simple example will help you better understand price discovery. The demand for wheat in each of two periods is the same and can be expressed in inverse form as P = 150 - Q. In period 1 supply is known to equal 70 units. This supply will partially be consumed in period 1 and the remainder will be stored (at zero cost) and then consumed in Period 2. When futures trading is taking place in period 1, production for period 2 is uncertain and thus must be estimated by the 21 speculators who actively trade wheat futures. </p>
+
+    <p> It is useful to arrange the speculators from the most bullish to most bearish regarding beliefs about period 2 price. A bullish (bearish) speculator believes period 2 production will be relatively low (high) and therefore the set of period 1 and 2 prices will be relatively high (low). Speculator 1 believes period 2 production will equal 40 units. Speculator 2 believes period 2 production will equal 41 units. And so forth all the way to speculator 21 who believes period 2 production will equal 60 units.</p>
+
+    <p> Given their individual beliefs, the speculators must make an assumption about how much wheat will be stored between period 1 and period 2. We can model these beliefs using the assumption of rational expectations. As will be explained below, speculators should rationally expect that 10 units will be stored between period 1 and period 2. Speculator 1 should therefore expect period 2 supply to equal 10 + 40 = 50 units, and period 2 price to equal P = 150 - 50 = 100. Similarly, speculator 2 should expect period 2 supply to equal to 10 + 41 = 51 units and price to equal P = 150 - 51 = 99. And so forth.</p>
+
+    <p> Suppose in period 1 a futures contract that calls for period 2 delivery is trading at P = 95. Speculator 1 will bid to take a long position because she will expect to later offset with a short position when the period 2 price is P = 100. If speculator 1's beliefs about period 2 production are correct then she will earn 100 - 95 = 5 in speculative profits. Speculators 2 through 5 will also bid for long positions because of positive expected profits. Speculator 7 expects period 2 production to equal 46 units and thus period 2 price to equal P = 150 - (10 + 46) = 94. Given that period 2 futures are trading at P = 95 speculator 2 will bid for a short position because she will later offset with a long position when she expects the period 2 price to equal P = 94. If speculator 7's beliefs about period 2 production are correct then she will earn 95 - 94 = 1 in speculative profits. Speculators 8 through 21 will also bid for short positions because of positive expected profits.</p>
+
+    <p>It should be clear that P = 95 is not an equilibrium futures price because the demand for short contracts by speculators 7 through 21 exceeds the demand for long contracts by speculators 1 through 5. The excess demand for short contracts will cause the futures price to be bid down to P = 90. At this price speculators 1 through 10 will bid long and speculators 12 through 21 will bid short. Speculator 10 will not bid for any position because she expects zero profits at this price. P = 90 is the equilibrium futures price because the number of speculators who are bidding long is equal to the number of speculators who are bidding short. Through individual speculators seeking profits the futures price has been discovered.</p>
+
+    <p> It was previously assumed that speculators should rationally expect the market to store 10 units between periods 1 and 2. Storing 10 units implies 70 - 10 = 60 units are available for consumption in the first period and thus the period 1 spot price will equal P = 150 - 60 = 90. Given that the equilibrium futures price for period 2 is also equal to P = 90 it follows that traders seeking arbitrage profits do not have an incentive to store more or less than 10 units. We therefore have a joint equilibrium in the spot market for the physical commodity and in the futures market.</p>
+
+    <p>Using this simple example it should be obvious what happens to the futures price if one or more of the speculators receive updated information about period 2 production. For example, suppose speculator 1 receives information that causes her to believe that period 2 production will equal Q = 35 rather than Q = 40. If the futures price is P = 90 this speculator will bid for additional long positions because she believes the period 2 offset price will equal P = 150 - (10 + 35) = 105. This excess demand for long contracts will bid the futures price up until a new equilibrium price has been established. Hopefully you can now understand the claim that the prevailing futures price reflects the full set of speculator information and beliefs.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Fundamentals of Supply and Demand</font> </blockquote>
+    </p>
+
+    <p>As the previous example shows, price determination by speculators in a futures market is complicated because it is necessary to predict the flow of stocks over time (i.e., storage) and up-and-coming market fundamentals (i.e., supply and demand). Fortunately the flow of stocks and future market fundamentals are closely related. For example, a favourable weather report will cause traders to increase their estimate of the size of the up-and-coming harvest and decrease their estimate of stock inflows. Stock inflows are downgraded because the larger harvest will result in lower prices in the future and so more of the commodity is consumed immediately rather than being stored for future consumption. </p>
+
+    <p>Consider the following market commentary from 
+    <a href="https://www.farmprogress.com/morning-market-review/morning-market-review-feb-4-2019" target="_blank">FarmProgress.com </a></p>
+
+    <p><i>Soybeans are a little lower, pulling back from Friday's six-week high. Positive news from trade talks last week as well as continued dry weather in Brazil are boosting U.S. export hopes, at least a little.</i></p>
+
+    <p>The commentary (dated February 4, 2019) explains the late January, 2019 rally in the price of soybeans, as is clearly illustrated in the chart below. Price is higher because the market expects higher global demand (particularly China) for U.S. soybeans. Demand is expected to be higher because trade talks will eventually result in the elimination of soybean tariffs (which were imposed in 2018 as part of a broader trade war). Moreover, drier growing conditions in Brazil implies the expectation of lower production and lower futures sales of soybeans by Brazil.</p>
+
+
+    <div class=figure>
+    <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/cme_soybeans_feb4.jpg"
+            width="600" height="360"
+            alt="FIGURE 1-B-1">
+    <p>FIGURE 1-B-1: CME Price of Soybeans for January, 2019
+    </div>
+
+    <p>Weather is a very important determinant of prices for dryland crops such as corn, soybeans and wheat. Reports during the North American growing season (May to October) and the South American growing season (October to May) can result in large price swings. It is common for prices to surge with an unanticipated report of frost or hail damage. An expectedly large rainfall when a region is experiencing drought conditions can cause prices to tumble. Winter kill and flooding are also important considerations as can be seen in the following 
+    <a href="https://www.farmprogress.com/morning-market-review/morning-market-review-feb-4-2019" target="_blank">FarmProgress.com </a>
+    February 4, 2019 commentary:</p>
+
+    <p><i>Wheat prices are steady to a little lower this morning as traders wait for export news and assess damage from last week's Polar Vortex. Winterkill is notoriously hard to predict, though flooding could be an issue in February from the Delta through the Ohio River Valley for soft red winter wheat.</i></p>
+
+    <p>Monthly USDA World Agricultural Supply and Demand Estimates (WASDE) reports are released after the conclusion of Friday trading. Depending on the extent that the estimates were not anticipated by traders, opening prices will often jump up or down by a significant amount the following Monday. According to analysts the 
+    <a href="https://www.usda.gov/oce/commodity/wasde/wasde0219.pdf" target="_blank">February, 2019 report </a>
+    was not particularly newsworthy and so the Monday market did not move very much in response to the report's release.</p>
+
+    <p>The strength of the U.S. dollar relative to other currencies such as the Euro and the Chinese Yuan is also an important determinant of commodity future prices. The following March 20, 2010 excerpt from 
+    <a href="https://www.farmprogress.com/grains/do-corn-prices-follow-value-us-dollar" target="_blank">FarmProgress.com </a>
+    describes the impact of a weaker U.S. dollar: </p>
+
+    <p><i>From the side of the U.S. corn importer, a lower valued dollar in relation to the currency of that country, all else equal, is in effect a reduction in the price of corn. A lower price to the importer might be expected to result in larger imports. That is, there would be a movement down the demand curve to a new, larger equilibrium of quantity supplied and quantity demanded.</i></p>
+
+    <p><i>For the U.S. market, larger exports at the same nominal price of corn is in effect an increase in demand. That is, there is an upward shift in the demand curve for U.S. corn. In turn, the increase in demand results in a higher equilibrium price of corn. Theoretically then, a lower-valued U.S. dollar should result in larger exports and a higher nominal price in the United States, assuming no change in other price factors.</i></p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Stocks-to-Use Ratio</font> </blockquote>
+    </p>
+
+    <p>A useful measure that combines commodity supply and demand is the stocks-to-use ratio. Theory predicts a higher price for a lower stocks-to-use ratio and vice versa. As would be expected, the sensitivity of price to changes in the stocks-to-use ratio is highest when the ratio is either relatively small or relatively large in value.</p>
+
+    <p>The first graph below from the
+            <a href="https://www.cmegroup.com/trading/agricultural/wheat-reports.html" target="_blank">CME </a>
+    shows the historic stocks-to-use ratio for wheat. The second graph below from 
+    <a href="https://www.macrotrends.net/2534/wheat-prices-historical-chart-data" target="_blank">Macrotrends.net</a>
+    shows the price of wheat over roughly the same time period.</p>
+
+    <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/02/cme_wheat_stocks_use.jpg"
+            width="604" height="421"
+            alt="FIGURE 1-B-2">
+            <p>FIGURE 1-B-2: CME Wheat Stocks and Usage
+        </div>
+
+    <br/>
+
+    <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/02/cme_wheat_price_historic.jpg"
+            width="765" height="407"
+            alt="FIGURE 1-B-3">
+            <p>FIGURE 1-B-3: Historic Price of Wheat
+        </div>
+
+    <p>Notice from Figures 1-B-2 and 1-B-3 that during the 2000 to 2007 period, price steadily climbed while the stocks-to-use ratio steadidly fell. A second price surge corresponds to a second drop in the stocks-to-use ratio over the 2010 to 2014 period. The steady increase in the stocks-to-use ratio in recent years corresponds to the on-going price decline since 2013.</p>
+        
+    <p>A blogger's description of how agricultural commodity prices respond to changes in the stock-to-use ratio can be found  
+    <a href="https://seekingalpha.com/instablog/839735-katchum/4889937-stock-use-ratio-vs-agriculture-prices" target="_blank">here</a>.</p>
+
+    <p>Price becomes particularly sensiive to a reduction in the stocks-to-use ratio when the ratio falls below a threshold value.
+    <a href="http://futures.tradingcharts.com/learning/stocks_to_use.html" target="Stocks-to-Use Report">TradingCharts.com</a> provide estimates of these threshold values for three major commodities: </p>
+
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p>On a world wide basis, strong price advances when the stock-to-use ratio falls below:</p>
+                <p><b>Wheat: </b>Under 20%</p>
+                <p><b>Corn: </b>Under 12%</p>
+                <p><b>Soybeans: </b>Under 10%</p>
+        </div>
+    </div>
+
+    <h4 style="color:red;">Complete the quiz preparation questions (Q1 - Q6) in the <i>Quiz Questions</i> tab.</h4>
+
+    <h4 style="color:red;">Complete Question 4, Assignment 1 in the <i>Assignment Questions tab</i></h4> 
+        
+    <h3 style="color:rgb(128, 0, 0);"><a name="a002"></a>(ii) Storage Dynamics and Seasonality</h3>
+        
+    <p>Storage is a key component of futures markets as is illustrated by the following example. Consider the price of a November soybean contract that is being traded in early June. The price of this contract is typically impacted after the USDA releases a report that estimates the number of acres of soybeans that were planted by U.S. farmers during the spring planting period. If the estimate is higher (lower) than what the market was anticipating then the price of November futures will be bid down (up). The reason for this price reaction should be obvious. But what is less obvious is the storage response, which is an important determinant of the November price. If the acreage estimate is higher than expected, then more soybeans will be sold in the pre-harvest period (i.e., June to September) and fewer soybeans will be sold post-harvest (i.e., after October). This change in storage implies less of a price reduction in the November contract than what would be the case if there is was no adjustment in storage. The situation is similar if the acreage estimate is lower than expected.</p>
+
+    <p>An important exception occurs when there is a "stock out". In this case, the market anticipates carrying over minimal stocks from the pre-harvest period to the post-harvest period because the pre-harvest price is relatively high and the post-harvest price will be relatively low. With a stockout, if the acreage estimate is higher than expected, then the November futures price will decline sharply because it is not possible to reduce the amount of carryover from pre to post harvest since carry over is already at a minimum.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Cost and Benefit of Storage</font> </blockquote>
+    </p>
+
+    <p>Storage entails both a cost and benefit for merchants who deal with the physical commodity.</p>  
+            
+    <br/>
+        
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p><b>Cost of Storage: </b>Physical storage cost + opportunity cost of capital</p>
+                <p><b>Benefit of Storage: </b>Convenience yield</p>
+        </div>
+    </div>
+
+    
+    <p>The physical cost of storage is the price of warehouse services (including insurance). This cost typically is higher (lower) when aggregate stocks are higher (lower) because less cost efficient storage facilities must be used for larger inventories. The opportunity cost of capital is the lost interest earning associated with the value of the inventory tied up in stocks rather than being sold and the proceeds invested. This opportunity cost, which also accounts for inventory spoilage, is generally proportional to the price of the commodity (e.g., 5 percent per year). In the model below the combined marginal physical cost of storage and opportunity cost of capital for period t is modeled as k<sub>t</sub> = k<sub>0</sub> + k<sub>1</sub>S<sub>t</sub> where S<sub>t</sub> is a measure of stocks at the end of period t. </p> 
+
+    <p>Convenience yield is the implicit benefit that merchants receive from having stocks close at hand to fill unexpected orders and avoid the transaction cost of purchasing inventory on a repeated basis. Convenience yield is typically inversely related to stocks because the convenience of having stocks close at hand is lower when stocks are plentiful and can easily be purchased in an external market. Convenience yield is equivalent to a negative cost of storage because it is by definition a benefit rather than a cost. In the model below marginal convenience yield is modeled as C<sub>t</sub> = c<sub>0</sub> - c<sub>1</sub>S<sub>t</sub>. </p>
+
+    <br/>
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                        The marginal carrying cost, denoted m<sub>t</sub>, is defined as the marginal cost of storage minus the marginal convenience yield: m<sub>t</sub> = m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub>, where  m<sub>0</sub> = k<sub>0</sub> - c<sub>0</sub> and m<sub>1</sub> = k<sub>1</sub> - c<sub>1</sub>.
+        </div>
+    </div>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Willingness to Store and Price Dynamics </font> </blockquote>
+    </p>
+    
+    <p>A merchant is willing to store the commodity only if the expected price gain over the period the commodity is stored is sufficient to cover the merchant's marginal carrying cost. If the expected price gain exceeds the marginal carrying cost then many merchants will want to hold stocks, and this excess demand will drive up the current price. In a competitive market the price will be driven up until the expected price gain is exactly equal to the marginal carrying cost. However, there is an important caveat. If stocks are zero and the expected price gain is less than the marginal carrying cost then nothing happens because it is not possible to hold negative stocks (i.e., buy in the future, receive as payment the marginal carrying cost and then sell today). These two concepts are VERY important in the theory of commodity pricing.</p>
+
+    <br/>
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p>If stocks are positive we expect the price difference to satisfy: P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub></p> 
+            <p> If stocks are zero we expect the price difference to satisfy: P<sub>t+1</sub> < P<sub>t </sub> + m<sub>0</sub> </p> 
+        </div>
+    </div>
+
+    <p>Consider a market with no supply and demand uncertainty. In this market there is no need to carry stocks over from one year to the next. Prices should adjust such that the last unit of stocks from the previous harvest are consumed just prior to the arrival of new stocks from the current harvest. The P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> pricing equation shows that after harvest is complete price will rise over time, with the rate of growth either increasing or decreasing with the declining level of stocks, depending on whether the m<sub>1</sub> parameter is positive or negative. When the new harvest arrives old stocks have declined to zero and so the P<sub>t+1</sub> < P<sub>t </sub> + m<sub>0</sub> pricing equation is now relevant. Specifically, P<sub>t+1</sub> is allowed to jump down below P<sub>t</sub> so that once again price can increase over time. The diagram below illustrates this "saw-toothed" pattern of prices for the case where each period represents a quarter of a year, and harvest takes place instaneously at the beginning of the third quarter.</p>
+
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/sawtooth_prices.jpg"
+        width="836" height="461"
+        alt="FIGURE 1-B-4">
+        <p>FIGURE 1-B-4: Interyear Prices with No Carry Over
+    </div>
+        
+    <p>Consider the same scenario except now assume that the market begins with stocks over and above those which arrive from harvest. These additional stocks will be gradually consumed over time until they disappear and the situation returns to that depicted in the graph above. Because it is costly to store this inventory the market is expected to absorb these additional stocks relatively rapidly (e.g., 1 - 2 years). What is important to note is that if stocks are carried over from one year to the next then price does NOT fall when new stocks arrive with the next harvest. This must be the case in order to satisfy the P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> pricing equation. The diagram below shows the pricing path assuming that the additional stocks are exactly used up just prior to the second year harvest. </p>
+
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/03/sawtooth_prices_2.jpg"
+        width="836" height="461"
+        alt="FIGURE 1-B-5">
+        <p>FIGURE 1-B-5: Interyear Prices with Carry Over
+    </div>
+
+    <h4 style="color:red;">Complete the quiz preparation questions (Q7 - Q12) in the <i>Quiz Questions</i> tab.</h4>
+
+    <h3 style="color:rgb(128, 0, 0);"><a name="a003"></a>(iii) Simulation Model</h3>
+
+    <p>What follows is a description of the mathematical simulation model that demonstrates the pricing paths which are illustrated in the previous two diagrams. You will have the opportunity to adjust the parameters of this model in an Excel workbook in the next part of your assignment. This will allow you to see how price is impacted by changes in key parameters such as beginning stocks and convenience yield.</p>
+
+    <p>The model consists of two marketing years with four quarters per year. Harvest is in the fall (Q1) of each year. Year 1 harvest is fixed at level H and year 2 harvest (H<sub>2</sub>) is uncertain. There is a 50 percent chance that year 2 harvest will be normal, which means the same as year 1 at level H. There is a 50 percent chance that poor weather will result in a loss of size L, in which case H<sub>2</sub> = H - L. If L is relatively small then the market will stock out in year 1 because the higher price that would result if there was a loss is not large enough to cover the carrying cost. Conversely, if L is relatively large then the market will carry over stocks from year 1 to year 2 because in this case the expected increase in price is large enough to cover the carrying cost.</p>
+
+    <p>Between harvests while the commodity is being stored the main pricing equation, P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub>, holds to ensure that the increase in price covers the carrying cost. The other two important equations are an inverse consumer demand equation, P<sub>t</sub> = a - bX<sub>t</sub> and the equation of motion, S<sub>t</sub> = S<sub>t-1 </sub> - X<sub>t</sub>. Within these equations, S<sub>t </sub> is a measure of stocks at the end of quarter t and X<sub>t </sub> is a measure of the quantity of stocks that are consumed in quarter t. The various equations of the model can now be grouped together and summarized as follows:</p>
+
+    <br/>
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <li> Equation (1): P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> </li> 
+            <li> Equation (2): P<sub>t</sub> = a - bX<sub>t</sub> </li> 
+            <li> Equation (3): S<sub>t</sub> = S<sub>t-1 </sub> - X<sub>t</sub> </li>           
+        </div>
+    </div>
+    
+    <p>The mathematical steps that are used to derive the equilibrium pricing equations and specify the complete two year model can be found in the Appendix tab.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Model Calibration </font> </blockquote>
+    </p>
+            
+    <p>The simulation model is calibrated to roughly correspond to U.S. corn production. In 2018 the U.S. produced 14.63 billion bushels and the average price was $3.70/bu. If this production was evenly consumed over the four quarters then we obtain an estimate 14.63/4 = 3.658 for average X. Invert equation (2) to obtain X<sub>t</sub> = a/b - (1/b)P<sub>t</sub>. The demand elasticity evaluated at average X and P for 2018 can be expressed as E = -(1/b)(3.70/3.658). Solve this equation to obtain an estimate of b equal to b = -(1/E)(3.70/3.658). Assuming a demand elasticity that is given by E = -2 implies b = 0.506. Substitute this value into 3.70 = a - b*3.568 and solve for a to obtain a = 5.550. The b = 0.506 and a = 5.550 parameter values fully specify the demand equation for the model.</p> 
+    
+    <p>The cost of storage and convenience yield is more challenging to specify due to lack of data. If harvest is 14.63 billion bushels and this amount is consumed evenly throughout the year then it is reasonable to use one half of this value (7.315) for the purpose of calculating the cost of storage and convenience yield. Suppose the net storage cost and convenience yield averages to $0.0925 per bushel per quarter (this assumes 2.5 percent of the $3.70 average price each quarter). Marginal carrying costs can be expressed as m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> and so an expression for the storage cost elasticity that is evaluated at  S<sub>t</sub> = 7.315 and net cost = 0.0925 can be expressed as e = m<sub>1</sub> (7.315/0.0925). Assuming a value of 0.5 for the storage elasticity gives m<sub>1</sub> = 0.0063. Finally, solving m<sub>0</sub> + 0.0063*7.315 = 0.0925 for m<sub>0</sub> gives m<sub>0</sub> = 0.0462. These values are rounded to m<sub>1</sub> = 0.005 and m<sub>0</sub> = 0.05. </p>
+
+    <p>The loss parameter, L, plays an important role in the pricing model because it determines whether or not the equilibrium involves stocks being carried over from year 1 to year 2. If the loss is relatively small then the price does not remain high enough with the arrival of new stocks to make it profitable to carry over stocks. Specifically, E(P<sub>t+1</sub>) < P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> for all positive values of S<sub>t</sub> (E denotes expected value). Conversely, if L takes on a relatively large value then E(P<sub>t+1</sub>) = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> does hold, in which case it is profitable for stocks to be carried over from year 1 to year 2. In the current analysis, L = 1.750 (12 percent of H) is used to simulate a scenario where the year 1 market stocks out because the loss is not large enough to justify carry over. As well, L = 7.315 (50 percent of H) is used to simulate a scenario where there is carry over from year 1 to year 2 to serve as a buffer in case a loss occurs. </p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Simulation Results  </font> </blockquote>
+    </p>
+    
+    <p> The various equations and mathematical assumptions which describe the simulation model were entered into an Excel workbook. You are not responsible to understand the structure of the Excel model. However, you will download this model and use it to answer questions 5 and 6 in Assignment 1 (details below). </p>
+
+    <p>The equilibrium levels of stocks, consumption and price that come from the Excel workbook are shown in Figures 1-B-6 and 1-B-7. The first figure corresponds to the case where L is low and the year 1 market stocks out. The second figure corresponds to the case where L is high and there is positive carry over from year 1 to year 2. The top chart in each diagram shows stocks and the bottom chart shows consumption and price. In the top chart the column labeled "Harvest" shows the stocks immediately after harvest but before consumption takes place, which is equivalent to stocks carried in plus harvest.</p>
+
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/figure_combo_stockout.jpg"
+        width="441" height="543"
+        alt="FIGURE 1-B-4">
+        <p>FIGURE 1-B-6: Simulated Stocks, Consumption and Price with Year 1 Stockout
+    </div>
+    
+    <p>In Figure 1-B-6 the market stock out results in the "saw toothed" pricing pattern that is illustrated in Figure 1-B-4 except now it is important to use the expected price (middle of the three line graphs) when comparing prices in years 1 and 2. In Figure 1-B-7 the expected price in year 2 continues the year 1 upward trend in price, which is the consistent with the pricing pattern in Figure 1-B-5. It is interesting to note in Figure 1-B-6 that the size of the carry over is quite small relative to the size of the potential loss.</p>
+            
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/figure_combo_no_stockout.jpg"
+        width="441" height="543"
+        alt="FIGURE 1-B-4">
+        <p>FIGURE 1-B-7: Simulated Stocks, Consumption and Price with Year 1 Carry Over
+    </div>
+
+    <p>The simulated outcomes in Figures 1-B-6 and 1-B-7 are not very realistic because in real world markets it would not be the case that the level of consumption varies widely over the course of the marketing year. In the current analysis the wide variation in consumption is the result of assuming a relatively large value of -2 for the elasticity of demand. As well, real world markets never carry zero stocks from one year to the next (i.e., a stock out as defined in this module never happens). The so-called pipeline stocks, which bridge commodity inventories from one year to the next, make up a sizeable fraction of real world stock holding. It would be straight forward to allow for pipeline stocks in the current model but doing so would complicate the current analyis without adding relevant new results or insights.
+    </p>
+
+    <h4 style="color:red;">Complete the quiz preparation questions (Q13 - Q18) in the <i>Quiz Questions</i> tab.</h4>
+
+    <h4 style="color:red;">Complete Question 5 - 6, Assignment 1 in the <i>Assignment Questions tab</i></h4>
+
+</div>  <!-- End of Tab 1-->
+
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+
+<div id="Tab2" class="tabcontent">
+  <h1 style="color:purple;">Assignment Questions</h1>
+
+  <h3 style="color:blue;">Use the assignment link in Canvas and select Assignment 1 for submission instructions</h3>
+
+    <h3>Assignment 1, Question 4: Price Discovery</h3>
+
+    <p>There is just one period and there are zero corn stocks at the beginning of the period. Inverse demand for corn is given by P = 100 - 10Q. There are five possible production outcomes: 0, 1, 2, 3 and 4 units. There are 100 speculators who have beliefs about the five production outcomes. Let F(0) denote the fraction of speculators who believe that production will equal 0 units. Similarly, F(1) is the fraction of speculators who believe that production will equal 1 unit, etc. Let F(x) with x = 0, 1, 2, 3 and 4 be given by the binomial function with p = 0.4. Round off the number of speculators in each belief category to the nearest integers, ensuring that the total number of speculators is equal to 100. Use Excel's binomial function to calculate the equilibrium futures price (i.e., the price which ensures that the difference between the number of long and short speculators is minimized).</p>
+
+    <table style="width: 50%; border-collapse: collapse;" border="1">
+    <tbody>
+    <tr>
+        <td style="width: 12.5%; text-align: center;">Market</td>
+        <td style="width: 12.5%; text-align: center;">Size-bushels</td>
+        <td style="width: 12.5%; text-align: center;">Size-tonnes</td>
+        <td style="width: 12.5%; text-align: center;">Expire month</td>
+    </tr>
+    <tr>
+        <td style="width: 12.5%;"></td>
+        <td style="width: 12.5%;"></td>
+        <td style="width: 12.5%;"></td>
+        <td style="width: 12.5%;"></td>
+    </tr>
+    </tbody>
+    </table>
+    <br/>
+    <table style="width: 50%; border-collapse: collapse;" border="1">
+            <tbody>
+            <tr>
+                <td style="width: 12.5%; text-align: center;">Price</td>
+                <td style="width: 12.5%; text-align: center;">Currency</td>
+                <td style="width: 12.5%; text-align: center;">Exchange</td>
+                <td style="width: 12.5%; text-align: center;">$US/bu</td>
+            </tr>
+            <tr>
+                <td style="width: 12.5%;"></td>
+                <td style="width: 12.5%;"></td>
+                <td style="width: 12.5%;"></td>
+                <td style="width: 12.5%;"></td>
+            </tr>
+            </tbody>
+            </table>
+
+
+    <h3>Assignment 1, Question 5: Simulation Model</h3>
+
+    <p> When answering the questions below use economic logic that relates to this module. Do use not arguments and logic that were not covered in this module.</p>
+
+    <p> Download the Excel-based <a href="other_1b/simulation_module1b.xlsx">simulation model</a> that was used in section (iii) of this module. 
+
+    <ol>
+        <li>Verify that that the P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> equation holds for Q1 through Q4 when the year 2 loss is small and stocks are carried over.</li>
+        <li>Verify that the the E(P<sub>5</sub>) = P<sub>4 </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>4</sub> equation holds when the year 2 loss is small and stocks are carried over.  </li>
+        <li>What is the largest value for the L_small parameter that is consistent with a year 1 stock out rather than stocks being carried over from year 1 to year 2? </li>
+        </ol>
+
+    <h3>Assignment 1, Question 6: Simulation Model</h3>
+
+
+    <p> Use the simulation model that you downloaded in the previous question to answer the following questions.  
+    
+    <ol>
+            <li>How does the price in the first quarter change if the cost of storage increases (i.e., a larger value for m<sub>0</sub>)? Briefly explain. </li>
+            <li>Suppose convenience yield increases so that c<sub>0</sub> decreases from 0.05 to -0.025. What happens to the pattern of prices over time? What happens to inter-year storage? Briefly explain.</li>
+            <li>How does the quarterly price increase change with a shift out of the demand curve (i.e., a higher value for a)? Briefly explain.</li>
+        </ol>  
+
+</div>  <!-- End of Tab 3-->
+
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+
+<div id="Tab3" class="tabcontent">
+  <h1 style="color:purple;">Quiz Prep Questions</h1>
+
+  <h2 style="color:green;">Index</h2>
+
+    <ul>
+        <li><a href="#d001">Jump to SubSection (i): Price Discovery.</a></li>
+        <li><a href="#d002">Jump to SubSection (ii): Storage Dynamics and Seasonality.</a></li> 
+        <li><a href="#d003">Jump to SubSection (iii): Simulation Model.</a></li>
+    </ul>
+
+    <h3 style="margin-left: 20px; margin-right: 700px;color:rgb(128, 0, 0);"><a name="d001"></a>SubSection (i) Price Discovery.</h3>
+    
+    <h5><i>Answer the following questions and be prepared to answer very similar questions during the in-class Canvas quiz:</i></h5>
+
+    <ol start="1"> 
+
+        <li><p>Review the USDA
+            <a href="https://www.usda.gov/oce/commodity/wasde/wasde0219.pdf" target="_blank">February, 2019 WASDE report </a>, which was released after trading on Friday, February 8th. Answer the following questions regarding how you believe commodity futures prices responded to the report on Monday, February 11, 2019.</p>
+        
+            <p>Based on information about the change in U.S. wheat stocks (first paragraph), the price of Wheat is expected to ________ (increase, decrease) (decrease). The primary reason for lower U.S. corn production is __________ (lower yield, lower acreage) (lower yield). The change in U.S. ethanal use is expected to contribute toward a __________ (lower, higher) (lower) price of U.S. corn. The percent of global rice stocks held by China is estimated to be between _________ (40 - 50%, 50 - 60%, 60 - 70%) (60 - 70%.)</p>
+        </li>         
+             
+        <li>
+            <p></p>Demand and supply schedules for sugar are given by Q<sup>D</sup> = a – bP and Q<sup>S</sup> = -&alpha;  + &beta; P, respectively. The market clears where demand is equal to supply. The four parameters (a, b, &alpha; and &beta;) all take on positive values. Suppose you receive private information that the b parameter will soon increase in value. To earn an expected profit you should</p>
+
+            <ol type="a">
+                <li>Take a long position in the sugar market and offset your position after the increase in b takes place and the market price has adjusted. </li>
+                <li>Take a short position in the sugar market and offset your position after the increase in b takes place and the market price has adjusted.</li>
+            </ol>
+        </li>
+            
+        <li>The U.S. is a net exporter of soybeans. Suppose you believe the U.S. dollar will appreciate over the next few weeks. To earn an expected profit you should:
+            <ol type="a">
+                <li>Take a long position in the soybean market and offset your position after the currency appreciation.  </li>
+                <li>Take a short position in the soybean market and offset your position after the currency appreciation.</li>
+            </ol>
+        </li>
+            
+        <li>Corn and soybeans are both used for animal feed. You have inside information that the USDA will soon announce that the corn harvest will be larger than previously anticipated. To earn an expected profit you should:  
+        
+        <ol type="a">
+            <li>Take a long position in the soybean market and offset your position after the USDA announcement and prices have fully adjusted.  </li>
+            <li>Take a short position in the soybean market and offset your position after the USDA announcement and prices have fully adjusted.</li>
+        </ol>
+
+        </li>
+
+
+        <li>You have inside information that China will soon unexpectedly raise the import tariff on U.S. soybeans and other U.S. products. To earn an expected profit you should: 
+
+        <ol type="a">
+            <li>Take a long position in the futures market for the U.S. dollar index and offset your position after China increases its tariffs and prices have adjusted.  </li>
+            <li>Take a short position in the futures market for the U.S. dollar index and offset your position after China increases its tariffs and prices have adjusted.</li>
+        </ol>
+            
+        </li>
+            
+        <li>In July of 2018 Scott Pruitt resigned as the director of the U.S. Environmental Protection Agency. Prior to his departure he had proposed a freeze on fuel economy standards, and weakened a number of environmental regulations including the mandated mixing of ethanol in gasoline. Suppose you heard of Pruitt’s unexpected departure before anyone else. To earn an expected profit you should: 
+
+        <ol type="a">
+                <li>Take a long position in corn futures and offset your position after Pruitt’s resignation is made public and prices have adjusted.  </li>
+                <li>Take a short position in corn futures and offset your position after Pruitt’s resignation is made public and prices have adjusted.</li>
+        </ol>
+
+        </li>
+            
+        <li>Suppose the USDA WASDE report indicates higher than expected production of corn and higher than expected overall useage of corn. How will the estimated stocks-to-use ratio be impacted by this announcement? 
+           
+            <ol type="a">
+                <li>The ratio will increase.  </li>
+                <li>The ratio will decrease.</li>
+                <li>The The ratio may increase or decrease, depending on the relative sizes of the adjusted estimates of corn production and usage.</li>
+            </ol>
+        </li>
+    </ol>
+
+            
+    <h3 style="color:rgb(128, 0, 0);"><a name="d002"></a>SubSection (ii) Storage Dynamics and Seasonality.</h3>
+
+    <h5><i>Answer the following questions and be prepared to answer very similar questions during the in-class Canvas quiz:</i></h5>
+
+    <ol start="8"> 
+        <li>Stocks of wheat are expected to _______ (increase, decrease) if the USDA announces that fewer acres of wheat will be planted the following year as compared to what was previously announced. This change in storage causes the current price of wheat to _________ (increase, decrease). The impact of the announcement on the current price of wheat is _________ (smaller, larger) the higher the interest rate in the economy (i.e., opportunity cost of capital).</li>
+
+        <li>The marginal convenience yield is expected to approach zero as the level of stocks become very ______ (small, large). If the marginal convenience yield is equal to the marginal cost of storage then the marginal net carrying cost is _________ (negative, positive, zero). If stocks are low before harvest and high after harvest then convenience yield _______ (can, cannot) explain why the price is expected to drop with the arrival of a new harvest.</li>
+
+        <li>If stocks from the old crop year are carried forward and combined with stocks from the new crop year then the price of the commodity ________ (is, is not) expected to drop with the arrival of the new harvest. If instead the market stocks out when transitioning from the old to the new crop year then forecasts about the size of the new harvest ______ (will, will not) impact the price of the old crop and ______ (will, will not) impact the price of the new crop.</li>
+
+        <li>Real world markets never fully stock out. One explanation is that as stocks become very _____ (low, high) the convenience yield becomes very ______ (low, high) and this _______ (increases, decreases) the market’s incentive to store.</li>
+
+        <li>If the market imports and exports the commodity then the saw-tooth pattern of prices is _____ (less likely, more likely). This is ______ (likely, unlikely) to be true for a crop like corn/maize that is produced in both the northern and southern hemisphere and is globally traded. For a commodity such as oil that does not have an annual harvest, the price is expected to _______ (increase, remain flat) over time.</li>
+    </ol>
+
+    <h3 style="color:rgb(128, 0, 0);"><a name="d003"></a>SubSection (iii) Simulation Model</h3>
+
+    <h5><i>Answer the following questions and be prepared to answer very similar questions during the in-class Canvas quiz:</i></h5>
+
+    <ol start="13"> 
+        <li>Which of the following statements best describes how uncertainty is incorported into the simulation model.  
+           
+            <ol type="a">
+                <li>Year 1 and Year 2 harvest are both uncertain.  </li>
+                <li>Year 1 harvest is uncertain and year 2 harvest is certain.</li>
+                <li>Year 2 harvest is either low or high with equal probability.</li>
+                <li>Year 2 harvest is either low or normal with equal probability.</li>
+            </ol>
+        </li>
+
+        <li>An important relationship in the simulation model has to do with the expected size of the year 2 harvest and the level of stocks carried over from year 1 to year 2.  
+           
+            <ol type="a">
+                <li>If the expected size of the year 2 harvest is greater than or equal to the size of the year 1 harvest then the market is not expected to stock out.</li>
+                <li>There is a 50 percent chance of a stockout if the expected size of the year 2 production is sufficiently large.</li>
+                <li>The stockout scenario is generated by setting the size of the expected loss in year 2 production to a sufficiently large value. </li>
+                <li>The stockout scenario is generated by setting the size of the expected loss in year 2 production to a sufficiently low value.</li>
+            </ol>
+        </li>
+
+        <li>Figure 1-B-6 shows simulated stocks and prices when the year 1 market stocks out.  
+           
+            <ol type="a">
+                <li>If year 2 production is normal, price does not drop with the arrival of year 2 harvest. </li>
+                <li>As of Q2, the expected price in Q6 is less than the actual price in Q2.</li>
+                <li>If there is a loss in year 2 production, the price drops by only a small amount with the arrival of the year 2 harvest.</li>
+                <li>None of the above.</li>
+            </ol>
+        </li>
+
+        <li>Figure 1-B-7 shows simulated stocks and prices when the year 1 stocks are carried over to year 2.  
+           
+            <ol type="a">
+                <li>If year 2 production is normal, price in Q5 is lower than in Q1, price in Q6 is lower than in Q2, etc </li>
+                <li>Prior to observing year 2 harvest, traders expect the price to increase when moving from Q4 to Q5 by an amount equal to the size of the carring cost.</li>
+                <li>If there is a loss in year 2 harvest, the increase in price from Q5 to Q8 is expected to be less than the increase in price from Q1 to Q4.</li>
+                <li>All of the above.</li>
+            </ol>
+        </li>
+
+        <li>A comparison of Figures 1-B-6 and 1-B-7 reveals the following:  
+           
+            <ol type="a">
+                <li>When comparing actual prices in Q1 through Q4 and expected prices in Q5 through Q8, Figure 1-B-7 better illustrates the saw toothed pattern of prices.</li>
+                <li>Prior to observing year 2 harvest, traders expect the price to increase when moving from Q4 to Q5 by an amount equal to the size of the carrying cost.</li>
+                <li>If there is a loss in year 2 harvest, the increase in price from Q5 to Q8 is expected to be less than the increase in price from Q1 to Q4.</li>
+                <li>All of the above.</li>
+            </ol>
+        </li>
+
+        <li>Consider Figure 1-B-7. Suppose in Q2 traders receive credible information that the year 2 harvest will experience a loss with 100 percent certainty.  
+           
+            <ol type="a">
+                <li>The price will drop with the arrival of the year 2 harvest:  P<sub>5</sub> < P<sub>4 </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>4</sub></li>
+                <li>The price will increase with the arrival of the year 2 harvest by amount which exceeds the carrying cost: P<sub>5</sub> > P<sub>4 </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>4</sub></li>
+                <li>The price will increase with the arrival of the year 2 harvest by amount which is equal to the carrying cost: P<sub>5</sub> = P<sub>4 </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>4</sub></li>
+                <li>The announcement will have no impact on the Q4 price.</li>
+            </ol>
+        </li>
+
+    </ol>
+
+</div> <!-- End of Tab 4-->
+
+
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+
+<div id="Tab4" class="tabcontent">
+
+    <h1 style="color:purple;">Readings</h1>
+
+    <ul>
+            <li><a href = "https://www.cmegroup.com/education/files/a-traders-guide-to-futures.pdf" target="_blank">CME Group: A Trader's Guide to Futures</a></li>
+            </ul>
+           
+        </ul>
+            
+    </div>  <!-- End of Tab 5-->
+
+
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+
+<div id="Tab5" class="tabcontent">
+    <h1 style="color:purple;">Appendix</h1>
+    <p> The mathematical equations that make up the simulation model are in PDF format. Click       
+    <a href="other_1b/appendix_module1b.pdf" target="Appendix File">here</a> to open.</p>
+            
+</div>  <!-- End of Tab 5-->
+
+
+</div>
+
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
