@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css">
+        .boxed {
+            border: 1px solid green ;
+            width: 450px;
+        }
+        </style>
+        <style>
+            p, li {max-width: 45em;}
+        </style>
+
+<style>
+        .nobr {
+            white-space: nowrap;
+            }
+        .supsub {
+        display: inline-block;
+        margin: -9em 0;
+        vertical-align: -0.55em;
+        line-height: 1.35em;
+        font-size: 70%;
+        text-align: left;
+        }
+</style>
+
+
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  /*color: white;*/
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Tab1 {background-color: white;}
+#Tab2 {background-color: white;}
+#Tab3 {background-color: white;}
+#Tab4 {background-color: white;}
+#Tab5 {background-color: white;}
+</style>
+</head>
+
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<body>
+        <h4 style="color:red;">Return to <a href="module2_select_page.html">Module Learning Outcomes</a> </h4>
+    <h2 style="color:green;">Module 2, Section A: Overview of Commodity Options Contracts</h2>
+
+<button class="tablink" onclick="openPage('Tab1', this, 'red')"id="defaultOpen">Main Content</button>
+<button class="tablink" onclick="openPage('Tab2', this, 'green')">Assign Questions</button>
+<button class="tablink" onclick="openPage('Tab3', this, 'blue')">Quiz Prep Questions</button>
+<button class="tablink" onclick="openPage('Tab4', this, 'orange')">Readings</button>
+<button class="tablink" onclick="openPage('Tab5', this, 'purple')">Appendix</button>
+
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+
+<div id="Tab1" class="tabcontent">
+        <h1 style="color:purple;">Main Content</h1>
+
+        <h2 style="color:green;">Index</h2>
+
+        <ul>
+            <li><a href="#a001">Jump to SubSection (i): Overview of Commodity Options</a></li>
+            <li><a href="#a002">Jump to SubSection (ii): Payoff Diagrams</a></li>
+            <li><a href="#a003">Jump to Subsection (iii): Determinant's of an Option's Price</a></li>
+        </ul>
+        
+    
+        <p>When you visit the CME website and choose the Settlements tab for a commodity such as corn you can choose to see the daily price and transaction data for a menu of option contracts that are associated with that commodity. The purpose of this module is to describe how option contracts work, how their payoffs are determined and how their selling price is established through competitive trade. The first section of this module provides a general overview of option contracts. This overview includes defining the "Greeks", which are theoretical measures of the sensitivity of the price of the option to the parameters which define the option contract. The second section is devoted to constructing payoff diagrams for options sellers and option buyers, and describing how option contracts are used for hedging. The last section is used to generate values for the "Greeks" with the CME options calculator, and to estimate two of the most important "Greeks" using a small sample of corn option data.</p> 
+
+        <h3 style="color:rgb(128, 0, 0);"><a name="a001"></a>(i) Overview of Commodity Options</h3> 
+            
+        <p>A call option that is often provided to a company's CEO allows the CEO to purchase stock of her company at a predetermined strike price. If the current share price drops below the strike price and the option is set to expire, the CEO will not exercise her option to purchase shares. The call option incentivises the CEO to work hard because for every dollar increase in the share price above the option's strike price is a dollar of comensation for the CEO. An alternative strategy (seldom used in the real world) is to force to CEO to hold put options. If the CEO performs well and the share price rises above the strike price then the put option will not be exercised. If instead the CEO performs poorly and the stock price falls below the strike price then the board of directors can exercise the put option, which forces the CEO to purchase stock at the current share price and thus take a financial hit.</p>
+        
+        <p>Exercising a call option on a commodity futures contact is equivalent to taking a long position in the futures market at the option's strike price with the proviso that the long position must be immediately offset at the current futures price. Similarly, exercising a put option on a commodity futures contract is equivalent to taking a short position in the futures market at the option's strike price with an immediate offset. If the current futures price is above the strike price and the options contract is set to expire then holders of a put option will not exercise and holders of a call option will exercise and earn a payoff equal to the futures price minus the strike price. Similarly, if the futures price is below the strike price and the option is set to expire then holders of a call option will not exercise and holders of a put option will exercise and earn a payoff equal to the strike price minus the futures price.</p>
+        <br/>
+
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p><i>Call Option</i>: Exercising is equivalent to taking a long futures position at predetermined strike price and then immediately offsetting.  </p> 
+                <p><i>Put Option</i>: Exercising is equivalent to taking a short futures position at predetermined strike price and then immediately offsetting.</p> 
+            </div>
+        </div>
+
+        <p>
+                <hr align="left" width="50%">
+                <blockquote><font size="4">Examples from the Corn Market</font> </blockquote>
+        </p>
+
+        <p>A futures contact is an obligation to accept delivery or make delivery of the commodity. This obligation can be offset but it cannot be resold to another trader. In contrast, an option contract is initially written/sold by a professional (often a firm) and this contract can be resold and repurchased many times before either the option expires without being exercised or it is exercised on or before the expiry date. For agricultural commodities the CME trades American-style options which allows the holder to exercise before the option expires. A European-style option can only be exercised at the point that it expires (see See  <a href="https://www.investopedia.com/articles/optioninvestor/08/american-european-options.asp">Investopedia</a>). There are dozens of call and put options that trade for a commodity such as corn at a given point in time. This is because options have different strike prices and different expiry dates. For the case of CME corn, Figure 2-A-1 shows the range of strike prices and expiry dates that a trader can choose as of August, 2019.</p>
+
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/corn_expiry_strikes.jpg"
+                width="655" height="230"
+                alt="FIGURE 2-A-1">
+            <p>FIGURE 2-A-1: Expiry Date and Strike Price Choices for Corn Options
+        </div>
+
+        <p>Figure 2-A-2 shows the volume of trade of call and put corn options (December, 2019 expiry) as of August 6, 2019. The horizontal axis shows the range of strike prices. The August 6, 2019 futures price is superimposed to serve as a benchmark. Notice that call options are more heavily traded than put options. Moreover, most of the traded call options are "out of the money", meaning that the current futures is below the strike price. Most of the traded put options are also out of the money, meaning that the current futures is above the strike price. The CME website reports open interest for each type of option that is actively being traded. For example, on August 6 the volume and open interest of an at the money call option with a strike price of 4100 ($4.10/bu) was 1,183 and 18,861, respectively. The analogous values for a put option with a strike price of 4100 is 400 and 17,304, respectively. These values demonstrate that at a given point in time the fraction of outstanding options which are actively traded is relatively small (i.e., 1183/18861 for a call, and 400/17304 for a put). </p>  
+        
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/corn_volume.jpg"
+                    width="660" height="400"
+                    alt="FIGURE 2-A-1">
+                <p>FIGURE 2-A-2: Volume of Trade of Corn Options as of August 6, 2019
+        </div>
+
+        <br/>  
+            <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+                    <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                        <p><i>Out of the Money</i>: A call (put) option with the strike price above (below) the current futures price. Option will not be exercised unless the futures price adjusts favourably. </p> 
+                        <p><i>In the money</i>: A call (put) option with the strike price below (above) the current futures price. Option will generate a payoff if it is exercised immediately.  </p>
+                    </div>
+                </div>
+            
+        <p> There is logical explanation as to why the volume of trading is the most active for out of the money options. A put option can be viewed as price insurance for a short hedging merchant who owns the commodity and is worried that the price will decrease prior to the commodity being resold. If the commodity's price sinks below the strike price then the option will payout and this payout will offset part of the merchant's loss in the spot market. A long hedging processor who wishes to hedge against the increase in the price of a key commodity input can use a call option as a form of input price insurance. Just as it is not common to purchase regular insurance for a loss that has already been incurred, it is not common for hedging firms to purchase an in the money call or put. In both cases the cost of buying the insurance is excessive when the option is in the money at the time of the purchase. </p>
+
+        <p>Figure 2-A-3 is a partial screen capture of the settle price and transaction data for call and put corn options (with a December, 2019 expiry date) as of August 6, 2019. The top of the chart shows that December futures settled at 412'4 ($4.125/bu). The bottom part of the chart show the prices of call and put options which expire in December of 2019. For example, a call option is priced at 28'3 ($0.284/bu) if the strike price is 4000 ($4.00/bu) and is priced at 20'3 ($0.204/bu) if the strike price is 4200 ($4.20/bu). Figure 2-A-3 demonstrates the expected result that call options with a lower strike price are relatively more expensive since the payoff is equal to the futures price minus the strike price. Similarly, the put options with a higher strike price are relatively more expensive. In Module 2-B a theoretical relationship known as "put-call parity" will be used to show how the price a call and the price of a put are closely connected. </p>
+
+        <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/corn_option_quotes.jpg"
+            width="730" height="336"
+            alt="FIGURE 2-A-3">
+        <p>FIGURE 2-A-3: Settlement Prices for Corn Options
+        </div>
+
+        <p>Figure 2-A-3 demonstrates that out of the money options with zero intrinsic value trade at a positive price due to the option's positive time value. The concept of time value is explored in greated deal in the next section but for now it is sufficient to interpret time value as the expected payout given the probability that the futures price will favourably change (e.g., increase for a call and decrease for a put) and the option is optimally exercised. For an option that is currently in the money, the intrinsic value is the payout if the option was exercised immediately, and the time value is the residual (i.e., the price of the option minus its intrinsic value). For example, on August 6th the price of a December, 2019 futures contract settled at 412'4 ($4.125/bu) and an in the money call option with a strike price of 4000 ($4.00/bu) settled at 28'3 ($0.284/bu). The intrinsic value of this particular call option is 4.125 - 4.00 = $0.125/bu and the time value is 0.284 - 0.125 = 0.159/bu. Notice that the time value of this in the money call is approximately equal to the time value of an out of the money put with a strike price of 4000 ($4.00/bu). </p>
+
+        <br/>
+
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p><i>Intrinsic value</i>: The difference between the futures price and the strike price of an in-the-money call, and the difference between the strike price and the futrues price for an in-the-money put. The Intrinsic value is zero for out of the money options. </p> 
+                <p><i>Time value</i>: The price of the option minus its intrinsic value. </p>
+            </div>
+        </div>
+
+        <h3 style="color:rgb(128, 0, 0);"><a name="a002"></a>(ii) Payoff Diagrams</h3>
+        
+
+        <p>The firm which writes (i.e., sells the original) call or put option collects the original selling price and in exchange is responsible for making payment to a firm or individual who may eventually exercise the option. There is no limit as to how much the price can change (other than remaining non-negative) and for this reason the payment from the option writer to the option exerciser can potentially be very large. In contrast, the most that can be lost by the person or firm which holds the option contract is the original cost of buying the option. The limited loss feature of an option contract makes them suitable to be held by individual investors in the absence of a margin account.</p> 
+
+        <p>Payoff diagrams for European-style options are an effective way to show the potential gains and losses from selling or buying call or put options. Figure 2-A-4 shows a payoff diagram for the case of buyer of a call option. The horizonal axis is the futures price when the call option is expiring. If the futures price is below the strike price (left side of diagram) then the out of the money call option has zero intrinsic value and it will not be exercised by its holder. In this case the payoff to the option holder is a loss equal to the purchase price of the option. If instead the futures price is above the strike price (right side of diagram) then the in the money call option has positive intrinsic value and it will be exercised by the option holder. The call has to be sufficiently deep in the money in order for the payoff to cover the purchase price of the option. The payoff schedule for the buyer has a slope of 1 for all in the money call options and there is no upper limit on the amount that can be collected when the option is exercised. </p>
+            
+        
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/call_buyer_payoff.jpg"
+                    width="600" height="375"
+                    alt="FIGURE 2-A-4">
+                <p>FIGURE 2-A-4: Payoff for the Buyer of a Call Option
+        </div>
+
+        <p>Figure 2-A-5 shows the payoff diagram for the writer/seller of the call option. When the futures price is below the strike price the call option will not be exercised by the holder of the option, in which case the seller's net gain is the price paid by the holder and received by the seller. When the futures price is above the strike price the option will be exercised and the seller of the option is required to pay the holder the difference between the futures price and the strike price. In this region the slope of the payoff function is 1 and there is no upper limit on the size of the payment from the seller to the buyer of the option. If the call option is only slightly in the money then the payout made by the seller will be less than the premium received by the seller, in which case the seller earns a positive net profit on the transaction.</p>
+        
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/call_seller_payoff.jpg"
+                    width="615" height="365"
+                    alt="FIGURE 2-A-5">
+                <p>FIGURE 2-A-5: Payoff for the Seller of s Call Option
+        </div>
+
+        <p>Figure 2-A-6 is the payoff diagram for the holder of a put option and Figure 2-A-7 is the payoff diagram for the writer of a put option. Notice that these two diagrams are mirror images of Figures 2-A-4 and 2-A-5. Specifically, the put option is not exercised and the price of the option is transferred from the holder of the option to the seller if the futures price is above the strike price. If the futures price is below the strike price then the put option is exercised and the payoff function has a slope of -1 for the option holder and 1 for the option seller. This means that below the strike price the seller transfers to the option holder the full change in the value of the commodity.</p>
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/put_buyer_payoff.jpg"
+                    width="644" height="403"
+                    alt="FIGURE 2-A-6">
+                <p>FIGURE 2-A-6: Payoff for the Buyer of a Put Option
+        </div>
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/put_seller_payoff.jpg"
+                    width="594" height="360"
+                    alt="FIGURE 2-A-7">
+                <p>FIGURE 2-A-7: Payoff for the Seller of a Put Option
+        </div>
+
+        <p>The payoff diagram in Figure 2-A-8 is for a straddle A straddle is created by purchasing one call option and one put option with the same expiry date and the same strike price. With this configuration, either the call component or the put component has intrinsic value at all points in time and thus one of these components will be exercised on or before the straddle's expiry date. Figure 2-A-8 shows that the net payoff after accounting for the cost of constructing the straddle is positive provided that the futures price moves either sufficiently above or sufficiently below the strike price. As compared to buying an individual call or put, the cost of constructing a straddle position is relatively large. Consequently, a relatively large change in the futures price is required in order for the payout of the straddle to be large enough to cover the cost of constructing the straddle. A straddle is commonly held by traders who are speculating that increased future volatility in the futures price will result in a positive payout from either the call or the put component of the straddle.</p>
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/straddle_buyer_payoff.jpg"
+                    width="580" height="380"
+                    alt="FIGURE 2-A-8">
+                <p>FIGURE 2-A-8: Payoff for the Holder of a Straddle 
+        </div>
+
+        <p>The payoff diagram in Figure 2-A-9 is for a strangle. A strangle is the same as a straddle except now the strike price of the call is greater than the strike price of the put. This difference in strike price creates a zone for the futures price where both the call and put component of the strangle has zero intrinsic value. Strangles are popular amongst investors because they are less expensive to construct as compared to a straddle. This disadvantage is that a larger decrease or a larger increase in the futures price is required in order for a positive payoff to be generated. Constructing an inexpensive strangle by setting the strike price of the call well above the strike price of the put is a popular way to take a long shot position with the hope that an unforseen event will cause either a large upward or downward surge in the futures price.</p>
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/straddle_nonequal_buyer_payoff.jpg"
+                    width="595" height="385"
+                    alt="FIGURE 2-A-9">
+                <p>FIGURE 2-A-9: Payoff for the Holder of a Strangle
+        </div>
+
+        <p>The last payoff diagram to be examined is for a butterfly spread, as illustrated in Figure 2-A-10. A butterfly spread is constructed by simultaneously buying and selling calls and/or put options with different strike prices. Describing the mechanics of a butterfly spread is beyond the scope of this course. What is important to note is that the butterfly spread has limited profit potential and for this reason is relatively inexpensive to construct. Specifically, as Figure 2-A-10 shows the net payoff for the butterfly spread is positive provided that increases or decreases in the futures price are not excessively large. The butterfly spread is a good example of the large number of complex payoff schedules that can be created by combining purchased and sold call and put options with different strike prices. An important limitation of the butterfly spread and other exotic option combinations is that the commission charge for combining the various components can quickly become excessive relative to the size of the expected payoff.</p>
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/butterfly_spread_payoff.jpg"
+                    width="588" height="312"
+                    alt="FIGURE 2-A-10">
+                <p>FIGURE 2-A-10: Payoff for Butterfly Spread
+        </div>
+
+
+        <h3 style="color:rgb(128, 0, 0);"><a name="a003"></a>(iii) Determinants of an Option's Price</h3>
+
+        <p>A call or put option is different than a commodity futures contract in that the price of these instruments do not reflect fundamentals about supply and demand beyond what is already reflected in the futures price. In other words, if traders knew the stochastic process which governs how the futures price changes over time then all traders would agree on the same price for the option contract and as such their individual beliefs about the supply and demand fundamentals would not be relevant for the pricing of the option. A popular assumption is that traders agree that futures prices roughly follow a log normal distribution, in which case the Black (1976) option pricing formula can be used to price the option (the Black 1976 formula is often referred to generically as the Black-Scholes formula). One of the parameters which feed into the Black-Scholes formula is the future volatility of the log normal price distribution. Traders typically disagree on the level of future volatility, and this disagreement allows for active centralized trading in options contracts.</p>
+
+        <p>The Black (1976) option pricing formula and other pricing formulas that are similar to Black-Scholes have three important parameters when treating the current price of the futures contract as fixed: (1) the option contract's strike price; (2) the number of days until the option contract expires; and (3) the volatility of the underlying futures price. Of interest is how the equilibrium price of the option, either when it is initially written or when it is subsequently exchanged between traders, is theoretically impacted by changes in these three underlying parameters. These Black (1976) comparative static results when expressed as a numerical outcome are uniquely identified by a Greek letter. Consequently, the full set of numerical comparative static outcomes are referred to as the "Greeks"</p>
+            
+        <p> Before presenting the simulated values for the Greeks, it is useful to develop the underlying intuition for the relationships between the price of the option and the parameters which define the option. This is accomplished by using a mini version of Monte Carlo analysis and focusing on the expected payoff of a European call option. Illustrating on a diagram the expected payoff is straight forward but it is not straight forward to infer the option's price from the expected payoff due to discounting. Nevetheless, examining how the expected payoff of an option is impacted by the parameteres which define the option will make the intuition which underlies the Greeks much easier to understand.</p>
+        
+        <p>The linkage between the price of the option and the parameters which define the option are examined in this section first through use of a simulated futures price and then by examining the "Greeks". The "Greeks" refer to the price responses that are derived from the Black (1976) European option pricing formula.</p>
+
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">Simulated Payoffs for a Call Option</font> </blockquote>
+        </p>
+
+        <p> The simulation begins on September 15, 2019 and ends when the futures contract and call option both expire at the end of December of 2021. With normal expectations, the futures price is not expected to systematically increase or decrease over time. Assume that on September 15, 2019 the market expects the December, 2021 futures price to equal $4.00/bu. Moving forward from September 15th, price follows a geometric random walk without drift, which means that the percentage change in the futures price between period t and period t + 1 is a normally distributed random variable with mean 0 and standard deviation &sigma;<sup>*</sup>. Prices are generated on a weekly basis which implies that &sigma;<sup>*</sup> = (1/52)<sup>0.5</sup>&sigma;, where &sigma; is a measure of annualized volatility for the price series. The next paragraph describes how existing futures price data can be used to estimate historic annualized volatility</p> 
+            
+        <p>If the data is daily then the first step when calculating annualized volatility is to take the natural log of the daily price and then create a new series consisting of the first difference of the logged prices. You should convince yourself with a simple example in an Excel worksheet that ln(P<sub>t+1</sub>) - ln(P<sub>t</sub>) is approximately equal to the percentage change in price: (P<sub>t+1</sub> - P<sub>t</sub>)/P<sub>t</sub>. The next step is to calculate the standard deviation of the ln(P<sub>t+1</sub>) - ln(P<sub>t</sub>) data series. Finally, multiply this standard deviation result by the square root of 252 to obtain annualized volatility. The 252 value is approximately equal to the number of trading days in a year. The method described here assumes that volatility remains constant over time. If this is not the case then more sophisticated methods such as ARCH or GARCH are use to estimate volatility</p>
+
+        <p>Figure 2-A-11 shows estimates of annualized volatility for CBOT corn futures spanning the years 1992 to 2016. This figure comes from a 2017 working paper titled "Future volatility forecast in agricultural commodity markets". It can be accessed <a href="https://econpapers.repec.org/paper/agsaaea17/258480.htm">here</a>. Notice that volatility varies over the course of the marketing year, generally highest just prior to harvest and lowest just after harvest. Also notice that corn prices are significantly more volatile in the second half of the sample (2006 - 2016) as compared to the first half (1992 - 2005).</p> 
+            
+            <br/>
+            <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/corn_volatility.jpg"
+                        width="676" height="315"
+                        alt="FIGURE 2-A-11">
+                    <p>FIGURE 2-A-11: Estimates of Corn Price Volatility
+            </div>
+        
+        <p>Based on Figure 1-A-11 it is appropriate to simulate the corn futures price with both a low  (&sigma; = 15 percent) and high (&sigma; = 30 percent) level of annualized price volatility. The Excel worksheet that is used to generate the prices can be found <a href="other_2a/corn_price_simulation.xlsx">here</a>. A typical Monte Carlo simulation procedure consists of generating tens of thousands of price series and then examined the averaged results. This level of precision is not required to illustrate the general properties of the expected payout of a call option. Instead, following the procedures described above, 10 simulated prices paths were generated and are illustrated in Figures 2-A-12 (high volatility) and 2-A-13 (low volatility). </p>
+
+            <br/>
+            <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/simulate_high_vol.jpg"
+                        width="777" height="554"
+                        alt="FIGURE 2-A-12">
+                    <p>FIGURE 2-A-12: Simulated Corn Price with High Volatility
+            </div>
+
+        <p>The dashed horizontal lines in Figures 2-A-12 and 2-A-13 imply alternative assumptions about the strike price for the call option. In Figure 2-A-12, the lower line at $3.70/bu (labeled S<sub>I</sub>) is associated with an in of the money call option as of the initial $4.00/bu price. Similarly, the upper line at $4.10/bu (labeled S<sub>O</sub>) is associated with an out of the money call option. The European call option is exercised only if the futures price at the end of December, 2021 is above the strike price, in which case the payoff is the vertical difference between the December, 2021 price and the strike price.</p>
+
+        <p>
+                <hr align="left" width="50%">
+                <blockquote><font size="4">Properties of Simulated Payoffs for Call Option</font> </blockquote>
+        </p>
+
+        <p> Figures 2-A-12 and 2-A-13 illustrate three importation results concerning how the expected payoff of the call option is impacted by the parameters which define the call. First, for all expiry time horizons a lower strike price implies a higher expected value of the call option. This result is well known but what is less obvious is how the size of the response is highly dependent on where the strike price is set. Suppose in Figure 2-A-12 the strike price is lowered by $0.05/bu. For the call option that is initially in the money (i.e., the bottom dashed line labeled S<sub>I</sub>), the decrease in the strike price by $0.05/bu will increase the average payoff for the call option by an amount that is close to $0.05/bu. This is because as Figure 2-A-12 shows the odds that the call option will be in the money when the call option expires is very high. Consequently, the average payoff for the call option will increase by nearly $0.05/bu. In contrast, for the call option that is initially out of the money (i.e., the bottom dashed line labeled S<sub>I</sub>), the decrease in the strike price by $0.05/bu will increase the average payoff of the call option by a comparatively small amount. This result emerges because the odds are relatively low that the call option will expire in the money. If the call does not expire in the money then the $0.05/bu reduction in the strike price has no impact on the call's payoff.</p> 
+
+        <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/simulate_low_vol.jpg"
+                    width="777" height="554"
+                    alt="FIGURE 2-A-13">
+                <p>FIGURE 2-A-13: Simulated Corn Price with Low Volatility
+        </div>
+            
+         <p>A comparison of Figures of 2-A-12 and 2-A-13 reveals how changes in the annualized volatility of the futures price affects the payoff of the call option. In both cases 3 out of the 10 simulated prices result in the expiring call being in the money. However, for the calls that do finish in the money, they tend to be much deeper in the money for the high volatility case (Figure 2-A-12) as compared to the low volatility case (Figure 2-A-13). Consequently, the payoff of the call option is expected to be higher with the higher level of price volatility. A more general interpretation of this result is that if the upside potential gain from holding the option is unlimited and the maximum downside potential loss from holding the option is the initial cost of the option, then large price swings give rise to higher gains without the corresponding offsetting losses. As was previously noted, the differences in opinion across speculators about the level of volatility is a key reason for active trading in centralized markets for option contracts.</p>   
+                 
+        <p>The third important comparative static result concerns how a longer time horizon affecs the expected payoff of the call option. Unlike the first two results, this property is difficulty to observe in Figures 2-A-12 and 2-A-13. Consider instead Figure 2-A-14, which illustrates a simple binomial model of option pricing. With this model P<sub>t+1</sub> is equal to P<sub>t</sub> + Z with probability 0.5 and is equal to P<sub>t</sub> - Z with probability 0.5. With this assumption, n periods after the start of the price series, the price depends only on the total number of periods that price increased and not on the distribution of price increases and price decreases. As such, the probability of ending up at a particular pricing outcome n periods aftr the start of the price series is given by the binomial formula.</p>
+
+        <p>Suppose in Figure 2-A-14 the call option expires at time T<sub>1</sub>, which is 2 periods after the start. Using the binomial formula, the probability of obtaining price <span class="nobr">P<span class="supsub">3<br />3</span></span> is equal to 0.125. The payoff to the holder of the call if this price emerges is 2Z. Thus, the expected payoff when the call expires at time T<sub>1</sub> is 0.25Z. Now suppose the option expires at time T<sub>2</sub>, which is 4 periods after the start. Once again using the binomial formula, the probability of ending up with price <span class="nobr">P<span class="supsub">5<br />5</span></span> is equal to 0.03125, and the probability of ending up with price <span class="nobr">P<span class="supsub">5<br />4</span></span> is equal to 0.15625. In this case the expected payoff from the call is equal to (0.03125*4 + 0.15625*2)Z, which reduces to 0.4375Z. The expected payoff with a T<sub>2</sub> expiry is therefore signficantly larger than the expected payoff with a T<sub>1</sub> expiry. The intuition for this result is similar to the intuition for the previous result concerning price volatility. In this case, with no limit on the upside and the maximum loss equal to the purchase price of the option the longer is the time horizon before expiry the greater the potential for a large payoff without the potential for an equal-sized offsetting loss.</p>
+
+            <br/>
+            <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/binomial_tree.jpg"
+                        width="504" height="480"
+                        alt="FIGURE 2-A-14">
+                    <p>FIGURE 2-A-14: Impact of Expiry Date on Payoff for European Call
+            </div>
+
+            <p>
+                    <hr align="left" width="50%">
+                    <blockquote><font size="4">The Greeks</font> </blockquote>
+            </p>
+            
+            <p>The comparative static results that were illustrated in the previous section can be generalized by examining the theoretical relationship between the price of an option and the three parameters which define the option. An important exception is that the sensitivity of the option's price with respect to the current futures price is examined rather than the sensitivity of the option's price to its strike price, which was the case in the previous section. The formal comparative static results concerning the option's price are labelled delta for the marginal impact of a higher futures price, vega for the marginal impact of higher volatility and theta for the marginal impact of a longer time until the option expires. These three marginal impacts, together with two additional marginal impacts which are not included in this analysis, are referred to as the Greeks. </p>
+
+
+            <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+                    <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                        <p><i>The "Greeks"</i> are a collection of individual measures (delta, vega, and theta) which measure the sensitivity of the option's price to the theoretical parameters which define the option pricing formula (e.g., underlying futures price, futures price volatility and time until the option expires). </p> 
+                        
+                    </div>
+                </div>
+
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">Option Pricing Calculator</font> </blockquote>
+        </p>
+
+        <p>Module 2-B is devoted to the theory which underlies the pricing of options on commodity futures. In this section we will use an option pricing calculator to demonstrate the "Greeks". The mathematical equations which define the price of a call and put option, and the "Greeks" can be found in many advanted textbooks or in the following June, 2013 blog post by <a href="https://www.glynholton.com/notes/black_1976/">Glyn Holton</a>. Professor Vercammen entered the formulas for the price of a call and put option into an Excel worksheet. You will be asked to <a href="other_2a/option_pricing_model.xlsx">download</a> this Excel-based calculator for use in Assignment 3.</p>
+
+        <p> The CME website provides a Black 1976 option pricing <a href="https://www.cmegroup.com/tools-information/quikstrike/options-calculator.html">calculator </a> that allows the Greeks to be calculated along with the theoretical price of the option. An August 9, 2019 screen capture of the calcultor for the case of a call option on corn futures with a December, 2019 expiry and a 420 ($4.20/bu) strike price is illustrated in Figure 2-A-15. Notice that the theoretical price of 22.43 ($0.2243/bu) is very close to the actual August 9th settle price of 23.25 ($0.2325/bu). This is because associated with the $0.2325 settle price is a level of implied volatility, and this imputed level of implied volatility is fed into the Black 1976 formula to generate the theoretical price of $0.2243/bu.</p> 
+
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/greeks_august9_corn_dec.jpg"
+                width="800" height="130"
+                alt="FIGURE 2-A-15">
+            <p>FIGURE 2-A-15: CME Option Pricing Calculator
+        </div> 
+
+        
+        <p>
+                <hr align="left" width="50%">
+                <blockquote><font size="4">The Option's Delta</font> </blockquote>
+        </p>
+       
+    <p>An option's delta is a measure of how the price of the option responds to changes in the underlying futures price. Of course the option pricing impact from an increase in the initial futures price holding the strike price constant is similar to the option pricing impact from a decrease in the strike price holding the initial futures price constant. Thus, similar to the discussion concerning Figure 2-A-12, if the strike is very low such that the call is deep in the money then we should expect the price of the call option to move almost one-for-one with an increase in the initial futures price. Conversely, if the strike price is very high such that he call is deep out of the money then we should expect the price of the call to move very little with an increase in the initial futures price.</p>
+
+    
+    <p>In the three tables to follow the strike price is fixed at 400 ($4.00/bu), the three columns correspond to an initial futures price equal to 390, 400 and 410, and the three columns correspond to volatility equal to 0.2. 0.3 and 0.4. The top half of table 2-A-16 shows the expected result that the price of the call is an increasing function of the initial futures price (i.e., moving from left to right along a particular row). The bottom half shows the specific value of delta for a particular combination of the initial futures price and volatility. As expected, delta takes on a comparatively low value when F<sub>0</sub>= 390 and the the option is rather deep out of the money. Similarly, delta takes on a comparatively high value when F<sub>0</sub>= 410 and the call option is rather deep out of the money. For example, when the expiry time is T = 40 weeks and the volatility is 0.3, the delta is 42 with a futures price of 390 and is 62 with a futures price of 410. This means that if the initial futures price increases by $0.01/bu from 390 to 391, the price of the call will increase by $0.0042/bu. In contrast, with the same increase but starting from an initial futures price equal to 410, the price of the call will increase by $0.0062/bu. The impact of different levels of volatility and expiry time on the size of delta will be explored Assignment 3.</p>
+
+
+    <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/greek_delta.jpg"
+                    width="491" height="454"
+                    alt="TABLE 2-A-1">
+            <p>TABLE 2-A-1: Option Prices and Delta
+    </div>
+
+    <p>Table 2-A-2 shows vega, which is how the price of the call is impacted by marginally higher volatility. Consistent with the results of the previous section, the top of Table 2-A-2 shows that higher volatility (moving down the columns) results in a higher price for the call option. The bottom of Table 2-A-2 shows the marginal impacts of volatility. For example, with an expiry date of T = 40 and a call option that is at the money (i.e., the futures price is 400), increasing volatility from 30 to 31 will increase the price of the call by 0.526, starting from a price of 15.81. The bottom half of Table 2-A-2 shows that a marginal increase in volatility has its biggest impact on the price of the option when the option is at the money versus residing in one of the tails. As well, the vega value is larger for option contracts with longr time horizons. Notice that size of vega changes very little in response to changes the level of volatility.</p>
+
+
+        <div class=figure>
+                <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/greek_vega.jpg"
+                        width="491" height="454"
+                        alt="TABLE 2-A-2">
+                <p>FIGURE TABLE 2-A-2: Option Prices and Vega
+        </div>
+
+        <p>The final comparative static result concerns theta, which is measure of the time decay of the price of the option. The top half of Table 2-A-3 reveals that expected result that the option has lower value the fewer the number of days until the option expires. The negative values in the bottom half of Table 2-A-3 shows the change in the price of the option for a one day reduction in the option's expiry time. For example, with the expiry time set at T = 40 days, the initial futures price set equal to 400 and the volatility set equal to 0.3, the bottom half of Table 2-A-3 reveals that the price of the call option will day by 0.197 units relatie to a starting price of 1581 for the call option. Not surprisingly, the value of theta is smaller the longer the expiry time. As well, theta is significantly larger at higher levels of price volatility. </p>
+
+
+
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/08/greek_theta.jpg"
+                    width="491" height="454"
+                    alt="TABLE 2-A-3">
+            <p>TABLE 2-A-3: Option Prices and Theta
+    </div>
+     
+        <h4 style="color:red;">Complete quiz preparation questions (Q1 - Q4) in the <i>Quiz Questions</i> tab.</h4> 
+    
+        <h3 style="color:rgb(128, 0, 0);"><a name="a002"></a>(ii) Payoff Diagrams</h3>
+    
+        <p>ccc.</p>
+    
+    
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">Short Hedge</font> </blockquote>
+        </p>
+    
+        <p>ddd.</p>
+    
+        <br/>
+    
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p>xxx </p> 
+            <p>yyy </p> 
+        </div>
+        </div>
+    
+        <p>eee.</p>
+        
+    
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">Long Hedge</font> </blockquote>
+        </p>
+
+        
+        <p>fff</p>
+        <br/>
+    
+          <p>gg</p>
+
+        <h4 style="color:red;">Complete quiz preparation questions (Q5 - Q7) in the <i>Quiz Questions</i> tab.</h4>
+
+        <h4 style="color:red;">Complete Question 7, Assignment 2 in the <i>Assignment Questions</i> tab.</h4>
+    
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">Determinants of Profits and Losses from Hedging</font> </blockquote>
+        </p>
+        
+        <p> hhh</p>
+        
+        
+    
+        <h4 style="color:red;">Complete quiz preparation questions (Q8 - Q9) in the <i>Quiz Questions</i> tab.</h4>
+
+
+        <h3 style="color:rgb(128, 0, 0);"><a name="a003"></a>(iii) Time Value of Option Price</h3>
+    
+        <p>kkk.</p>
+    
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">XXXX</font> </blockquote>
+        </p>
+    
+        <p>lll</p>
+    
+        
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">ZZZ</font> </blockquote>
+        </p>
+    
+        <p>mmm</p>
+    
+         
+
+
+        <h4 style="color:red;">Complete quiz preparation questions (Q10 - Q13) in the <i>Quiz Questions</i> tab.</h4>
+
+        <h4 style="color:red;">Complete Question 8, Assignment 2 in the <i>Assignment Questions</i> tab.</h4>
+
+    
+        <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">VVVV</font> </blockquote>
+        </p>
+    
+        
+        
+        <h4 style="color:red;">Complete quiz preparation questions (Q14 - Q15) in the <i>Quiz Questions</i> tab.</h4>
+
+        <p>
+            <hr align="left" width="50%">
+            <blockquote><font size="4">AAA</font> </blockquote>
+        </p>
+    
+        <p>vvvv</p>
+    
+        
+    
+    
+    <h4 style="color:red;">Complete quiz preparation questions (Q16 - Q18) in the <i>Quiz Questions</i> tab.</h4>
+
+
+</div>
+
+
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+
+<div id="Tab2" class="tabcontent">
+        <h1 style="color:purple;">Questions for Assignment 3</h1>
+
+        <h3 style="color:blue;">Use the assignment link in Canvas and select Assignment 3 for submission instructions</h3>
+    
+        <br/>
+        <p>For assignment question in Module 2_A you will use BBB <a href="other_1d/bloomberg_corn_data.xlsx">data</a>.</p> 
+            
+        <p>Use the prices in this data set to answer questions 7 and 8 below.</p> 
+
+    <ol start="7">
+    
+        <li><p>Assume you manage a Cargill grain buying elevator near Decatur, Illinois. You purchased corn from a local farmer on date t1 and will sell it to a local ethanol plant on date t2. You paid the farmer the spot price that was reported on date t1. When you sell the corn on date t2 you will receive the spot price that is reported for that day. Assume that t1 is the day nearest to your birthday in 2017, and t2 is six months later, adjusted to the nearest trading day.</p> 
+        
+        <ol type="a">
+            <li>Identify t1 and t2 in your particular case. In order to hedge your spot market exposure, what futures market position will take on date t1? When will you offset that position?</li>
+            <li>Construct a table that shows the profit/loss you made in the spot market and in the futures market. Use this table to calculate your gross profits/loss from your hedge position.</li>
+            <li>Calculate the basis on dates t1 and t2. Demonstrate that the change in the basis is equal to the gross profits/loss from the hedge, which you calculated in part b.</li>
+            <li>Calculate your profit/loss in the spot market if you did not hedge. How does your gross profits/loss with the hedge compare with your profit/loss if you did not hedge? Should these values be either both positive or both negative? Or can one be positive and one be negative? Briefly explain.</li>
+        </ol>
+        
+       </li>
+       <br/>
+       <li><p>Module 1.D emphasized that hedging does not fully eliminate the variance in profits if the basis fluctuates over time. If a manager wants to minimize the variance of net hedging profits then the fraction of the spot market position that is hedged should be scaled back to account for fluctuations in the basis. The optimal fraction to hedge is referred to as the minimum variance hedging ratio. You can read about it <a href="https://financetrain.com/minimum-variance-hedge-ratio/">here</a>. </p> 
+        
+        <ol type="a">
+            <li>Using the data that you downloaded, calculate the day-to-day change in the spot and futures price series.</li>
+            <li>Calculate the standard deviation of the spot and future price changes. Calculate the correlation between the spot and future price changes.</li>
+            <li>Use your results from part (c) together with the formula from the minimum variance hedge reading (see above) to calculate the minimum variance hedge ratio for corn.</li>
+        </ol>
+        
+       </li>
+
+    </ol>
+</div>
+
+
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+
+<div id="Tab3" class="tabcontent">
+
+    <h1 style="color:purple;">Quiz Prep Questions</h1>
+
+    <h2 style="color:green;">Index</h2>
+          
+    <ul>
+        <li><a href="#d001">Jump to SubSection (i): Empirical Examination of Corn Options.</a></li>
+        <li><a href="#d002">Jump to SubSection (ii): Payoff Diagrams.</a></li> 
+        <li><a href="#d003">Jump to SubSection (iii): Time Value of Option Price.</a></li>
+    </ul>
+          
+
+    <h3 style="margin-left: 20px; margin-right: 700px;color:rgb(128, 0, 0);"><a name="d001"></a>SubSection (i) Empirical Examination of Corn Options.</h3>
+              
+    <h5><i>Answer the following questions and be prepared to answer very similar questions during the in-class Canvas quiz:</i></h5>
+          
+    <ol start="1"> 
+        <li>The basis at Decatur, Illinois is generally negative because of high carrying costs in this part of the U.S. midwest _____ (True/False).  </li>
+        <br/>
+        <li>The corn basis tends to be positively correlated with the price of corn because  high (low) stocks of corn tend to cause a low (high) price, a high (low) physical cost of storage and a low (high) convenience yield _____ (True/False).</li> 
+        <br/>
+        <li>In the risk simulation exercise that is described at the beginning of Module 1-D, the average profit earned by a speculator who purchased corn at the beginning of each month and sold it two months later is approximately equal to zero. This outcome implies that hedging has limited value in this market _____ (True/False).</li> 
+        <br/>
+        <li>In the risk simulation exercise, a randomly-selected two-month trading period generates varying levels of profits or losses. The probability that a loss in excess of $0.40/bushel is approximately 9 percent _____ (True/False).</li>
+    </ol>
+        <h3 style="margin-left: 20px; margin-right: 700px;color:rgb(128, 0, 0);"><a name="d002"></a>SubSection (ii) Payoff Diagrams.</h3>
+              
+    <h5><i>Answer the following questions and be prepared to answer very similar questions during the in-class Canvas quiz:</i></h5>
+
+    <ol start="5"> 
+        <li>Shorting in the stock market involves borrowing the stock, immediately selling it and then later rebuying the stock in order to repay the stock that was on loan. A trader who shorts a stock earns _________ (negative, positive) profit if the price of the stock decreases between when the stock was borrowed and when it was repaid.  A long hedge implies that the merchant has a ______ (long, short) position in the spot market.</li> 
+        <br/>
+
+        <li>Suppose on April 29 a grain buyer in Dacatur agrees to pay a local corn farmer the current spot price of $3.94/bu when the corn is delivered on October 7th. The buyer intends to immediately sell the corn at the October 7th spot price when it is delivered on October 7th. The grain buyer should use a ______ (short, long) hedge to reduce price risk. With the optimal hedge in place, the buyer will earn ______ (positive, negative) profits if the futures price decreases faster than the spot price over the April 29  - Octobr 7 period.</li> 
+        <br/>
+          
+        <li>While it is true that hedging eliminates price risk if the gains on the futures transaction fully offset losses in the spot market and vice versa, it is not the case that hedging is neutral with respect to the interim cash flow. With a short hedge, the merchant will face large margin calls if the spot price ________ (decreases, increases) strongly over time. Margin calls can be financed with loans secured with the commodity as collateral in the case of the ________ (short, long) hedge. </li> 
+        <br/>
+
+        <li>If spot and futures prices are trending up, an increase in the basis over time implies that the spot price has _______ (decreased, increased) relative to the futures price, which in turn implies that gains in the spot market have been ______ (less, greater) than losses in the futures market.</li>
+        <br/>  
+
+        <li>In the Kansas City spot market, a short hedger earns ______ (negative, positive) profits if the basis becomes more negative over time, which is equivalent to a ______ (decrease, increase) in the absolute size of the basis. </li>
+        <br/>  
+        
+    </ol>
+
+    <h3 style="margin-left: 20px; margin-right: 700px;color:rgb(128, 0, 0);"><a name="d003"></a>SubSection (iii) Time Value of Option Price.</h3>
+              
+    <h5><i>Answer the following questions and be prepared to answer very similar questions during the in-class Canvas quiz:</i></h5>
+          
+    <ol start="10"> 
+         
+        <li>
+            <p>Which of the following statements best describes expected hedging profits in the Gulf Coast spot market assuming normal price expectations.</p>
+            
+            <ol type="a">
+                <li>Gross profits for the short hedger are positive if the spot price is expected to increase over time due to a positive carrying charge. </li>
+                <li>Net hedging profits is equal to gross hedging profits minus the trader's cost of carrying the commodity minus commission charges for trading futures.</li>
+                <li>The short hedger expects positive net profits if the market's cost of carry is greater than the trader's personal cost of carry.</li>
+                <li>All of the above.</li>
+            </ol>
+        </li>
+
+        <li>
+            <p>This question compares gross hedging profits when the market stocks out rather than carrying over stocks from one year to the next.</p>
+            
+            <ol type="a">
+                <li>A stockout typically results in a strengthening of the basis over the harvesting period. </li>
+                <li>Gross profits for the short hedger are more likely to be positive if the market stocks out versus carries stocks across marketing years.</li>
+                <li>All else equal, hedging profits are more likely to be positive in the Gulf Coast market versus the Kansas City market because the basis is positive at the Gulf Coast and negative at Kansas City. </li>
+                <li>None of the above.</li>
+            </ol>
+        </li>
+
+        <li>
+            <p>Suppose the Gulf Coast - Kansas City price discount increases over the hedging period and the carrying charge remains constant over time. The impact of this change on expected gross hedging profits is expected to:</p>
+            
+            <ol type="a">
+                <li>Be negative.  </li>
+                <li>Be positive. </li>
+                <li>Have no impact.</li>
+                <li>Have an ambiguous sign (i.e., negative or positive).</li>
+            </ol>
+        </li>
+
+        <li>
+            <p>Corn futures trade in December, 2019 and March, 2020. Suppose a short hedge is initiated on December 15 (i.e., when the December contract is about to expire) and is lifted on March 15 (i.e., when the March contract is about to expire). With normal price expectations, gross profits are expected to equal:</p>
+            
+            <ol type="a">
+                <li>The December 15th basis minus the March 15th basis.  </li>
+                <li>The December 15th basis plus the December - March price spread</li>
+                <li>The December 15th basis minus the December - March price spread</li>
+                <li>The December - March price spread</li>
+            </ol>
+        </li>
+
+        <br/>
+        <li> The basis generally takes on a low value when stocks are high. As stocks diminish the basis gradually returns to its long run equilibrium level, which is equivalent to saying that the basis is ___________ (weakening, strengthening) over time. The low stocks caused the initial basis to be __________ (weak, strong).</li>
+
+        <br/>
+        <li>Suppose the basis in the Kansas City market is strong when the hedge is initiated. This means that the value of the basis is ________ (less, more) negative than what is usual. A stronger initial hedge in the Kansas City market is equivalent to a _________ (smaller, larger) absolute value of the initial basis.</li>
+
+        <br/>
+        <li> Normal backwadation causes the intial basis to be _________ (weak, strong) because the futures price is bid ________ (up, down) relative to the expected futures price when the contract expires. Normal backwardation gradually diminishes over time and thus the basis gradually _________ (weakens, strengthens) over time.    
+        </li>
+
+        <br/>
+        <li> Contango tilts the forward curve _______ (down, up) because when the hedge is initiated the futures price is _________ (below, above) the expected futures price when the contract expires.   
+        </li>
+
+        <br/>
+        <li>With the modern interpretation of backwardation, there is a temporary _________ (shortage, surplus) of the commodity and so the price of a futures contract with a long time until expiry is priced ______ (lower, higher) than a contract with a short time until expiry.    
+        </li>
+
+    </ol>
+
+        <br/>
+
+        
+
+
+
+
+
+</div>
+
+
+
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+
+<div id="Tab4" class="tabcontent">
+
+        <h1 style="color:purple;">Readings</h1>
+
+  <p>Content for "Readings"</p>
+</div>
+
+
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+
+<div id="Tab5" class="tabcontent">
+
+        <h1 style="color:purple;">Appendix</h1>
+        
+    <p>Content for "Appendix"</p>
+  </div>
+
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
