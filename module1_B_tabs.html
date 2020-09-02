@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <style type="text/css">
+            .boxed {
+                border: 1px solid green ;
+                width: 450px;
+            }
+        </style>
+        <style>
+            p, li {max-width: 45em;}
+        </style>
+
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  /*color: white;*/
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Tab1 {background-color: white;}
+#Tab2 {background-color: white;}
+#Tab3 {background-color: white;}
+#Tab4 {background-color: white;}
+#Tab5 {background-color: white;}
+</style>
+</head>
+
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<body>
+        <h4 style="color:red;">Return to <a href="module1_select_page.html">Module Learning Outcomes</a> </h4>
+
+        <h2 style="color:green;">Module 1, Section B: Pricing Relationships</h2>
+
+<button class="tablink" onclick="openPage('Tab1', this, 'red')"id="defaultOpen">Main Content</button>
+<button class="tablink" onclick="openPage('Tab2', this, 'green')">Assignment Questions</button>
+<button class="tablink" onclick="openPage('Tab3', this, 'blue')">Practice Questions</button>
+<button class="tablink" onclick="openPage('Tab4', this, 'orange')">Readings</button>
+<button class="tablink" onclick="openPage('Tab5', this, 'purple')">Appendix</button>
+
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+
+<div id="Tab1" class="tabcontent">
+    <h1 style="color:purple;">Main Content</h1>
+
+    <h2 style="color:green;">Index</h2>
+
+    <ul>
+        <li><a href="#a001">Jump to SubSection (i): Price Discovery </a></li>
+        <li><a href="#a002">Jump to SubSection (ii): Storage Dynamics and Seaonality</a></li>
+        <li><a href="#a003">Jump to Subsection (iii): Simulation Model</a></li>
+    </ul>
+        
+    <h3 style="color:rgb(128, 0, 0);"><a name="a001"></a>(i) Price Discovery</h3>
+        
+    <p>As noted in the previous module, an important role of commodity futures markets is price discovery. In an attempt to earn profits, speculators trade commodity futures based on their knowledge and beliefs about current and future supply and demand conditions. The equilibrium futures prices that are reported and continually updated throughout the trading day reflect the aggregation of speculators' current knowledge and beliefs about market fundamentals.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Simple Example</font> </blockquote>
+    </p>
+
+    <p>The following simple example will help you better understand price discovery. The demand for wheat in each of two periods is the same and can be expressed in inverse form as P = 150 - Q. In period 1 supply is known to equal 70 units. This supply will partially be consumed in period 1 and the remainder will be stored (at zero cost) and then consumed in Period 2. When futures trading is taking place in period 1, production for period 2 is uncertain and thus must be estimated by the 21 speculators who actively trade wheat futures. </p>
+
+    <p> It is useful to arrange the speculators from the most bullish to most bearish regarding beliefs about period 2 price. A bullish (bearish) speculator believes period 2 production will be relatively low (high) and therefore the set of period 1 and 2 prices will be relatively high (low). Speculator 1 believes period 2 production will equal 40 units. Speculator 2 believes period 2 production will equal 41 units. And so forth all the way to speculator 21 who believes period 2 production will equal 60 units.</p>
+
+    <p> Given their individual beliefs, the speculators must make an assumption about how much wheat will be stored between period 1 and period 2. We can model these beliefs using the assumption of rational expectations. As will be explained below, speculators should rationally expect that 10 units will be stored between period 1 and period 2. Speculator 1 should therefore expect period 2 supply to equal 10 + 40 = 50 units, and period 2 price to equal P = 150 - 50 = 100. Similarly, speculator 2 should expect period 2 supply to equal to 10 + 41 = 51 units and price to equal P = 150 - 51 = 99. And so forth.</p>
+
+    <p> Suppose in period 1 a futures contract that calls for period 2 delivery is trading at P = 95. Speculator 1 will bid to take a long position because she will expect to later offset with a short position when the period 2 price is P = 100. If speculator 1's beliefs about period 2 production are correct then she will earn 100 - 95 = 5 in speculative profits. Speculators 2 through 5 will also bid for long positions because of positive expected profits. Speculator 7 expects period 2 production to equal 46 units and thus period 2 price to equal P = 150 - (10 + 46) = 94. Given that period 2 futures are trading at P = 95 speculator 2 will bid for a short position because she will later offset with a long position when she expects the period 2 price to equal P = 94. If speculator 7's beliefs about period 2 production are correct then she will earn 95 - 94 = 1 in speculative profits. Speculators 8 through 21 will also bid for short positions because of positive expected profits.</p>
+
+    <p>It should be clear that P = 95 is not an equilibrium futures price because the demand for short contracts by speculators 7 through 21 exceeds the demand for long contracts by speculators 1 through 5. The excess demand for short contracts will cause the futures price to be bid down to P = 90. At this price speculators 1 through 10 will bid long and speculators 12 through 21 will bid short. Speculator 10 will not bid for any position because she expects zero profits at this price. P = 90 is the equilibrium futures price because the number of speculators who are bidding long is equal to the number of speculators who are bidding short. Through individual speculators seeking profits the futures price has been discovered.</p>
+
+    <p> It was previously assumed that speculators should rationally expect the market to store 10 units between periods 1 and 2. Storing 10 units implies 70 - 10 = 60 units are available for consumption in the first period and thus the period 1 spot price will equal P = 150 - 60 = 90. Given that the equilibrium futures price for period 2 is also equal to P = 90 it follows that traders seeking arbitrage profits do not have an incentive to store more or less than 10 units. We therefore have a joint equilibrium in the spot market for the physical commodity and in the futures market.</p>
+
+    <p>Using this simple example it should be obvious what happens to the futures price if one or more of the speculators receive updated information about period 2 production. For example, suppose speculator 1 receives information that causes her to believe that period 2 production will equal Q = 35 rather than Q = 40. If the futures price is P = 90 this speculator will bid for additional long positions because she believes the period 2 offset price will equal P = 150 - (10 + 35) = 105. This excess demand for long contracts will bid the futures price up until a new equilibrium price has been established. Hopefully you can now understand the claim that the prevailing futures price reflects the full set of speculator information and beliefs.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Fundamentals of Supply and Demand</font> </blockquote>
+    </p>
+
+    <p>As the previous example shows, price determination by speculators in a futures market is complicated because it is necessary to predict the flow of stocks over time (i.e., storage) and up-and-coming market fundamentals (i.e., supply and demand). Fortunately the flow of stocks and future market fundamentals are closely related. For example, a favourable weather report will cause traders to increase their estimate of the size of the up-and-coming harvest and decrease their estimate of stock inflows. Stock inflows are downgraded because the larger harvest will result in lower prices in the future and so more of the commodity is consumed immediately rather than being stored for future consumption. </p>
+
+    <p>Consider the following market February 4, 2019 commentary from an analyst at FarmProgress.com.</p>
+
+    <p><i>Soybeans are a little lower, pulling back from Friday's six-week high. Positive news from trade talks last week as well as continued dry weather in Brazil are boosting U.S. export hopes, at least a little.</i></p>
+
+    <p>The explains the late January, 2019 rally in the price of soybeans, which is clearly illustrated in the chart below. Price is higher because the market expects higher global demand (particularly China) for U.S. soybeans. Demand is expected to be higher because trade talks will eventually result in the elimination of soybean tariffs (which were imposed in 2018 as part of a broader trade war). Moreover, drier growing conditions in Brazil implies the expectation of lower production and lower futures sales of soybeans by Brazil.</p>
+
+
+    <div class=figure>
+    <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/cme_soybeans_feb4.jpg"
+            width="600" height="360"
+            alt="FIGURE 1-B-1">
+    <p>FIGURE 1-B-1: CME Price of Soybeans for January, 2019
+    </div>
+
+    <p>Weather is a very important determinant of prices for dryland crops such as corn, soybeans and wheat. Reports during the North American growing season (May to October) and the South American growing season (October to May) can result in large price swings. It is common for prices to surge with an unanticipated report of frost or hail damage. An expectedly large rainfall when a region is experiencing drought conditions can cause prices to tumble. Winter kill and flooding are also important considerations as can be seen in the following February 4, 2019 FarmProgress.com commentary:</p> 
+
+    <p><i>Wheat prices are steady to a little lower this morning as traders wait for export news and assess damage from last week's Polar Vortex. Winterkill is notoriously hard to predict, though flooding could be an issue in February from the Delta through the Ohio River Valley for soft red winter wheat.</i></p>
+
+    <p>Monthly USDA World Agricultural Supply and Demand Estimates (WASDE) reports are released after the conclusion of Friday trading. Depending on the extent that the estimates were not anticipated by traders, opening prices will often jump up or down by a significant amount the following Monday. According to analysts the 
+    <a href="https://downloads.usda.library.cornell.edu/usda-esmis/files/3t945q76s/nz806541q/6682x9431/latest.pdf" target="_blank">February, 2019 report </a>
+    was not particularly newsworthy and so the Monday market did not move very much in response to the report's release.</p>
+
+    <p>The strength of the U.S. dollar relative to other currencies such as the Euro and the Chinese Yuan is also an important determinant of commodity future prices. The following March 20, 2010 excerpt from 
+    <a href="https://www.farmprogress.com/grains/do-corn-prices-follow-value-us-dollar" target="_blank">FarmProgress.com </a>
+    describes the impact of a weaker U.S. dollar: </p>
+
+    <p><i>From the side of the U.S. corn importer, a lower valued dollar in relation to the currency of that country, all else equal, is in effect a reduction in the price of corn. A lower price to the importer might be expected to result in larger imports. That is, there would be a movement down the demand curve to a new, larger equilibrium of quantity supplied and quantity demanded.</i></p>
+
+    <p><i>For the U.S. market, larger exports at the same nominal price of corn is in effect an increase in demand. That is, there is an upward shift in the demand curve for U.S. corn. In turn, the increase in demand results in a higher equilibrium price of corn. Theoretically then, a lower-valued U.S. dollar should result in larger exports and a higher nominal price in the United States, assuming no change in other price factors.</i></p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Stocks-to-Use Ratio</font> </blockquote>
+    </p>
+
+    <p>A useful measure that combines commodity supply and demand is the stocks-to-use ratio. Theory predicts a higher price for a lower stocks-to-use ratio and vice versa. As would be expected, the sensitivity of price to changes in the stocks-to-use ratio is highest when the ratio is either relatively small or relatively large in value.</p>
+
+    <p>The first graph below from the
+            <a href="https://www.cmegroup.com/trading/agricultural/wheat-reports.html" target="_blank">CME </a>
+    shows the historic stocks-to-use ratio for wheat. The second graph below from 
+    <a href="https://www.macrotrends.net/2534/wheat-prices-historical-chart-data" target="_blank">Macrotrends.net</a>
+    shows the price of wheat over roughly the same time period.</p>
+
+    <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/02/cme_wheat_stocks_use.jpg"
+            width="604" height="421"
+            alt="FIGURE 1-B-2">
+            <p>FIGURE 1-B-2: CME Wheat Stocks and Usage
+        </div>
+
+    <br/>
+
+    <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/02/cme_wheat_price_historic.jpg"
+            width="765" height="407"
+            alt="FIGURE 1-B-3">
+            <p>FIGURE 1-B-3: Historic Price of Wheat
+        </div>
+
+    <p>Notice from Figures 1-B-2 and 1-B-3 that during the 2000 to 2007 period, price steadily climbed while the stocks-to-use ratio steadily fell. A second price surge corresponds to a second drop in the stocks-to-use ratio over the 2010 to 2014 period. The steady increase in the stocks-to-use ratio in recent years corresponds to the on-going price decline since 2013.</p>
+        
+    <p>A blogger's description of how agricultural commodity prices respond to changes in the stock-to-use ratio can be found  
+    <a href="https://seekingalpha.com/instablog/839735-katchum/4889937-stock-use-ratio-vs-agriculture-prices" target="_blank">here</a>.</p>
+
+    <p>Price becomes particularly sensitive to a reduction in the stocks-to-use ratio when the ratio falls below a threshold value.
+    <a href="http://futures.tradingcharts.com/learning/stocks_to_use.html" target="Stocks-to-Use Report">TradingCharts.com</a> provide estimates of these threshold values for three major commodities: </p>
+
+    <div style="margin-left: 20px; margin-right: 400px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p>On a world wide basis, strong price advances when the stock-to-use ratio falls below:</p>
+                <p><b>Wheat: </b>Under 20%</p>
+                <p><b>Corn: </b>Under 12%</p>
+                <p><b>Soybeans: </b>Under 10%</p>
+        </div>
+    </div>
+
+    
+        
+    <h3 style="color:rgb(128, 0, 0);"><a name="a002"></a>(ii) Storage Dynamics and Seasonality</h3>
+        
+    <p>Storage is a key component of futures markets as is illustrated by the following example. Consider the price of a November soybean contract that is being traded in early June. The price of this contract is typically impacted after the USDA releases a report that estimates the number of acres of soybeans that were planted by U.S. farmers during the spring planting period. If the estimate is higher (lower) than what the market was anticipating then the price of November futures will be bid down (up). The reason for this price reaction should be obvious. But what is less obvious is the storage response, which is an important determinant of the November price. If the acreage estimate is higher than expected, then more soybeans will be sold in the pre-harvest period (i.e., June to September) and fewer soybeans will be sold post-harvest (i.e., after October). This change in storage implies less of a price reduction in the November contract than what would be the case if there is was no adjustment in storage. The situation is similar if the acreage estimate is lower than expected.</p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Cost and Benefit of Storage</font> </blockquote>
+    </p>
+
+    <p>Storage entails both a cost and benefit for merchants who deal with the physical commodity.</p>  
+            
+    <br/>
+        
+    <div style="margin-left: 20px; margin-right: 400px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p><b>Cost of Storage: </b>Physical storage cost + opportunity cost of capital</p>
+                <p><b>Benefit of Storage: </b>Convenience yield</p>
+        </div>
+    </div>
+
+    
+    <p>The physical cost of storage is the price of warehouse services (including insurance). This cost typically is higher (lower) when aggregate stocks are higher (lower) because less cost efficient storage facilities must be used for larger inventories. The opportunity cost of capital is the lost interest earning associated with the value of the inventory tied up in stocks rather than being sold and the proceeds invested. This opportunity cost, which also accounts for inventory spoilage, is generally proportional to the price of the commodity (e.g., 5 percent per year). In the model below the combined marginal physical cost of storage and opportunity cost of capital for period t is modeled as k<sub>t</sub> = k<sub>0</sub> + k<sub>1</sub>S<sub>t</sub> where S<sub>t</sub> is a measure of stocks at the end of period t. </p> 
+
+    <p>Convenience yield is the implicit benefit that merchants receive from having stocks close at hand to fill unexpected orders and avoid the transaction cost of purchasing inventory on a repeated basis. Convenience yield is typically inversely related to stocks because the convenience of having stocks close at hand is lower when stocks are plentiful and can easily be purchased in an external market. Convenience yield is equivalent to a negative cost of storage because it is by definition a benefit rather than a cost. In the model below marginal convenience yield is modeled as C<sub>t</sub> = c<sub>0</sub> - c<sub>1</sub>S<sub>t</sub>. </p>
+
+    <br/>
+    <div style="margin-left: 20px; margin-right: 400px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                        The marginal carrying cost, denoted m<sub>t</sub>, is defined as the marginal cost of storage minus the marginal convenience yield: m<sub>t</sub> = m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub>, where  m<sub>0</sub> = k<sub>0</sub> - c<sub>0</sub> and m<sub>1</sub> = k<sub>1</sub> + c<sub>1</sub>.
+        </div>
+    </div>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Willingness to Store and Price Dynamics </font> </blockquote>
+    </p>
+    
+    <p>A merchant is willing to store the commodity only if the expected price gain over the period the commodity is stored is sufficient to cover the merchant's marginal carrying cost. If the expected price gain exceeds the marginal carrying cost then many merchants will want to hold stocks, and this excess demand will drive up the current price. In a competitive market the price will be driven up until the expected price gain is exactly equal to the marginal carrying cost. This concept is equivalent to an intertemporal law of one price (LOP). When prices over time are in equilibrium a pair of prices at two different points of time (e.g., January and March) are expected to be equal after adjusting for the marginal convenience yield. This LOP concept is worth emphasizing.  </p>
+
+    <br/>
+    <div style="margin-left: 20px; margin-right: 400px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p>If stocks are positive then at a given point in time we expect the price next period to satisfy: P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub></p> 
+            <p> This relationship holds only for expected prices. Actual prices will typically not follow this formula due to the arrival of new information. </p> 
+        </div>
+    </div>
+
+    <p>In the section to follow a simulation model is constructed and calibrated to the U.S. corn market. It is important that the model make reasonably accurate predictions about real world prices. The model assumes that each time period is a three month interval (i.e., a quarter). The years are based on a crop year rather than a calendar year. Thus, Q1 is September to November, Q2 is December to February, Q3 is March to May and Q4 is June to August. These quarters roughly correspond to fall, winter, spring and summer.</p>
+
+    <p>Figure 1-B-4 shows the long term average price of corn for each of the four quarters. The quarterly averages were calculated using data from 1980 - 2018. These prices illustrate the intertemporal LOP relationship which was presented in the previous textbox. The price is lowest during the Q1 harvest season and then climbs for the next two quarters. Between Q1 and Q3 the price increase is relatively large because the marginal storage cost is relatively high and the marginal convenience yield is relatively low. By Q3 stocks are starting to run low, which results in a relatively low marginal cost of storage and a relative high marginal convenience yield. In fact, by Q4 the marginal convenience yield is greater than the marginal cost of storage, which results in a negative marginal carrying cost and thus a price decrease between Q3 and Q4 rather than a price increase. If the prices are graphed for eight quarters rather than four, we would see a relative large price decrease between Q4 of the old crop year and Q1 of the new crop year. This large drop reflects the rapid increase in the marginal cost of storage and the rapid decrease in the marginal convenience yield with the arrival of the new harvest. It is important to keep in mind that the P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> pricing relationship continues to hold when transitioning from the old crop year to the new crop year.</p>
+
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/quarterly_corn_prices.jpg"
+        width="520" height="313"
+        alt="FIGURE 1-B-4">
+        <p>FIGURE 1-B-4 Source: USDA Feed Grains Database (1980 Q1 to 2018 Q4)
+    </div>
+        
+    <p>The take-away message is that the intertemporal LOP equation is a key component of the seasonal pricing pattern which we observe in the markets for most grains which have an annual harvest. Economists routinely use econometric analysis to test this theory but there is one major problem: convenience yield cannot be observed. At the farm level, convenience yield has little relevance because farmers are intent on selling their commodity for the highest net price after accounting for their actual cost of storage. On the other hand it is reasonable to believe that processors receive a great deal of convenience from having stocks on hand. Some economists have modeled convenience yield as an option value in an uncertain environment. Other economists simply view convenience yield as a "fudge factor" which ensures that the intertemporal LOP holds by assumption. We will not worry about these distinctions. What is important is that it is common to see firms carrying over inventory from the old crop year to the new crop year even though they know prices will be lower with the arrival of the new harvest. If the level of carry over drops to a critically low level then we say the market has "stocked out". In this case the LOP relationship becomes P<sub>t+1</sub> < P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> with S<sub>t</sub> = 0 because it is not possible to carry over negative stocks. </p>
+
+    <h3 style="color:rgb(128, 0, 0);"><a name="a003"></a>(iii) Simulation Model</h3>
+
+    <p>The commodity pricing model which is used in this section can be downloaded <a href="http://blogs.ubc.ca/jvercammen/files/2020/09/CommodityPricingModel.xlsx" target="_blank">here</a> </p>
+    
+    <p>The commodity pricing model presented in this section is a simplified version of the model presented in a recent <a href="http://blogs.ubc.ca/jvercammen/files/2020/08/Commodity_Pricing_July2020.pdf" target="_blank">research paper</a> by Professor Vercammen. For this class production uncertainty has been eliminated to simplify the mathematics. The model consists of two marketing years with four quarters per year. Stocks at level S<sub>0</sub> are in place when the model begins. We start the analysis with harvest for year 1 (at level H<sub>1</sub>) just wrapping up. The total inventory of S<sub>0</sub> + H<sub>1</sub> is consumed domestically and exported over the next four quarters. The amount of year 1 stocks which are carried over and combined with the year 2 harvest depends on how expected prices in year 2 compare with actual prices in year 1 (i.e., the carry over level is endogenous in the model). Year 2 is the same as year 1 except beginning stocks in Q5 (i.e., the harvest season of the second year) is typically different than S<sub>0</sub>, and stocks at the end of Q8 are restricted to equal a predetermined value, S<sub>8</sub>. For the base case we assume S<sub>8</sub> = S<sub>0</sub>.</p> 
+    
+    <p>The commodity inventory is sold in both the domestic market (e.g., the U.S. Midwest) and the export market (e.g., the U.S. Gulf Coast). Let X<sub>t</sub> denote quarter t sales to the domestic market and let N<sub>t</sub> denote quarter t sales to the export market. The inverse demand schedule in the domestic market, P<sub>t</sub> = a - bX<sub>t</sub>, is assumed to be the same for each quarter. The analysis is simplified by assuming the export price, P<sup>X</sup>, is constant for all four quarters of each of the two marketing years. The annual export price is such that the foreign demand for U.S. exports for the four quarters of the marketing year, which is given by N<sup>D</sup>=e(P<sup>X</sup>)<sup>-0.5</sup>, is equal to the U.S. supply of exports for each of the four quarters of the marketing year, which is given by N<sup>S</sup>=N<sub>1</sub> + N<sub>2</sub> + N<sub>3</sub> + N<sub>4</sub>) for year 1 and N<sup>S</sup>=N<sub>5</sub> + N<sub>6</sub> + N<sub>7</sub> + N<sub>8</sub>) for year 2. Solving this equation allows expressions for the annual export price for the two years to be respectively expressed as
+        
+    <br/>
+        <div style="margin-left: 20px; margin-right: 400px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <li> Equation (1): P<sup>X</sup><sub>1</sub> = e<sup>2</sup>  (N<sub>1</sub> + N<sub>2</sub> + N<sub>3</sub> + N<sub>4</sub>)<sup>-2 </sup> </li> 
+                <li> Equation (2): P<sup>X</sup><sub>2</sub> = e<sup>2</sup>  (N<sub>5</sub> + N<sub>6</sub> + N<sub>7</sub> + N<sub>8</sub>)<sup>-2 </sup> </li>      
+            </div>
+        </div>   
+        
+        
+    <p> The commodity is transported from the domestic market to the export market by rail and barge. Assume that the cost per unit of commodity which is transported is a linear increasing function of quarterly export sales:  n<sub>0</sub> + n<sub>1</sub>N<sub>t</sub>. This assumption reflects the fact that rail and barge capacity is limited and therefore the service cost is higher when the system becomes more congested.   </p> 
+
+    <p>In addition to equations (1) and (2) above, the equations which make up this model can be expressed as follows:</p>
+
+    <br/>
+    <div style="margin-left: 20px; margin-right: 400px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <li> Equation (3): P<sub>t+1</sub> = P<sub>t </sub> + m<sub>0</sub> + m<sub>1</sub>S<sub>t</sub> </li> 
+            <li> Equation (4a): P<sub>t</sub> = P<sup>X</sup><sub>1</sub> - (n<sub>0</sub> + n<sub>1</sub>N<sub>t</sub>) for t = {1,2,3,4} </li> 
+            <li> Equation (4b): P<sub>t</sub> = P<sup>X</sup><sub>2</sub> - (n<sub>0</sub> + n<sub>1</sub>N<sub>t</sub>) for t = {5,6,7,8} </li>
+            <li> Equation (5): P<sub>t</sub> = a - bX<sub>t</sub> </li> 
+            <li> Equation (6): S<sub>t</sub> = S<sub>t-1 </sub> + H<sub>t</sub> - X<sub>t</sub> - N<sub>t</sub> </li>           
+        </div>
+    </div>
+    
+    <p>Equation (3) is the intertemporal LOP, which was presented and discussed in the previous section. Equations (4a) and (4b) both reflect the spatial LOP because it shows that the price in the domestic market and the export market are the same after adjusting for the cost of transporting the commodity between the two markets. Equation (5) is the domestic inverse demand schedule. Equation (6) is referred to as the equation of motion because it shows how stocks evolve over time. Specifically, stocks carried out of quarter t are equal to stocks carried into quarter t  (these are the same as stocks carried out of quarter t - 1) plus harvest if in Q1 or Q5 minus the amount which is consumed domestically and exported. Together with the assumption that S<sub>0</sub> and S<sub>8</sub> have predetermined values, this system of equations can be solved to give us a set of solution values for domestic consumption (X<sub>t</sub>), exports (N<sub>t</sub>), stocks (S<sub>t</sub>) and the domestic price (P<sub>t</sub>).   </p>
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Model Calibration </font> </blockquote>
+    </p>
+            
+    <p>The simulation model is calibrated to roughly correspond to U.S. corn production. The details of the calibration can be found in Professor Vercammen's <a href="http://blogs.ubc.ca/jvercammen/files/2020/08/Commodity_Pricing_July2020.pdf" target="_blank">working paper </a>. The specific parameter values are in the top left corner of the "Main" worksheet of "Commodity Pricing Model.xlsx", which you will be using as part of FRE 501. A screen shot of these values are shown in Figure 1-B-5. The left column contains the set of base case values - these never change. The right column contains the set of "what if" values, some of which you will change as part of your learning process. The model allows the year 2 domestic demand schedule to shift either in or out relative to the year 1 demand curve. This is accomplished by setting the intercept value for the year 2 demand schedule, a_hat, different than the intercept value for the year 1 demand curve, a. The model also allows the parameter which controls year 2 export demand, e_hat, to be different than the parameter which controls year 1 export demand, e. </p> 
+
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/09/parameter_value.jpg"
+            width="520" height="345"
+            alt="FIGURE 1-B-5">
+            <p>FIGURE 1-B-5 Parameter Values for Simulation Model
+        </div>   
+
+     <p>The pricing model has four what-if options for you to experiment with (see Figure 1-B-6). In each case you can change the parameter to be 10 or 20 percent above or below the base level. The control on the top left allows you to adjust the level of initial stocks, and the control on the top right allows you to adjust the year 2 export demand. In the bottom row, the control on the left allows you to adjust the size of the year 2 harvest and the control on the right allows you to change the value of the year 2 demand intercept. After each change in one or more parameters it is necessary to run the pre-programmed Solver tool in the Excel worksheet in order to calculate the full set of equilibrium prices and quantities. </p> 
+     
+     <p>When conducting the what if analysis it is important to keep in mind that you are at the the beginning of Q1 and are assessing how stocks, domestic consumption, exports and prices will evolve over the next eight quarters. Imagine yourself having just read the most recent USDA report and observing the base parameter values in the report. You use those base parameter values to solve the model and observe the set of equilibrium outcomes for the set of quantity and price variables. While still at the beginning of Q1 a USDA update comes across your desk and you notice that one or more of the parameters have changed (you set the parameter changes using the controls in Figure 1-B-6). You use the updated parameter values to recalculate the set of equilibrium quantity and price variables. The purpose of the what if analysis is to compare and explain the differences in the base case and revised values for the equilibrium quantities and prices.</p>  
+     
+     <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/09/whatif_select.jpg"
+        width="374" height="450"
+        alt="FIGURE 1-B-6">
+        <p>FIGURE 1-B-6 Options for What If Analysis
+    </div>   
+
+    <p>
+        <hr align="left" width="50%">
+        <blockquote><font size="4">Simulation Results  </font> </blockquote>
+    </p>
+    
+    <p> Figures 1-B-7 and 1-B-8 below show the base case outcome and a what if scenario of 20 percent higher export demand in year 2 as compared to the year 1 base. This higher demand bids up the year 1 export price from 5.096 to 5.152 and bids up he year 2 export price from 5.105 to 5.803. Not surprisingly, the shock to year 2 demand has the biggest impact on the year 2 export price. Of interest for this analysis is how this surge in year 2 export demand affects prices and quantities in the domestic market. Consider first the base case prices, which are given by the blue columns in Figure 1-B-8. Notice that the pattern of prices over time are similar to long term average prices from the U.S. corn market, which are shown in Figure 1-B-4. Keep in mind that it is the declining marginal storage costs and the increasing convenience yield which gives rise to this particular pricing pattern.</p> 
+    
+    <p>The blue and green columns in Figure 1-B-7 show the base case pattern of domestic consumption and exports, respectfully. During Q1 through Q3, and during Q5 through Q7, consumption declines due to the rising domestic price, and in Q4 and Q8 consumption increases slightly due to the decline in the domestic price. The same is true for exports. This occurs because the rise in the domestic price and the constant value for the export price implies a decreasing price margin for exporters throughout the marketing year. The gold columns in Figure 1-B-7 show the surge in exports in year 2 in response to the surge in year 2 export demand. Notice there is very little change in exports in year 1. The orange columns in Figure 1-B-7 show that year 1 domestic consumption shrinks by a moderate amount and year 2 domestic consumption shrinks by a large amount in response to the Q1 announcement of higher year 2 export demand. There are two reasons for this shrinkage. The first is that the higher export demand has inflated domestic prices (this is shown below) and these higher prices cause a reduction in domestic demand. The second, which is most relevant for year 2, is that exports and domestic consumption are substitutes and so the surge in exports in year 2 results in a sharp reduction in year 2 consumption.</p>
+
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/09/consumption_export.jpg"
+        width="734" height="444"
+        alt="FIGURE 1-B-7">
+        <p>FIGURE 1-B-7 Simulated Consumption and Exports with What If = Higher Global Production
+    </div>  
+    
+    <p>The green and gold line graphs in Figure 1-B-8 show the level of stocks in the base case and what if case, respectively. Notice that the level of stocks which are stored from quarter to quarter is higher in the what if case. This is expected because the surge in year 2 exports will draw stocks away from year 1 and toward year 2 where they are more valuable. We will see below that quarterly prices are higher in year 2 than they are in year 1. This is another way of explaining why the level of stocks which shift from year 1 to year 2 are higher in the what if case than the base case. The blue and orange columns in Figure 1-B-8 show the domestic prices for the base case and what if case, respectively. Not surprisingly, domestic prices are higher in year 2 in the what if case. This is due to the higher export demand and the resulting higher volume of export sales which are sold at the higher export price in year 2. What is less intuitive is why the domestic prices rise fairly significantly in year 1 despite the fact that the surge in export demand does not happen until year 2. This price rise happens because of the stocks which are drawn away from year 1. If more of the commodity is placed into storage in year 1 there is less available for consumption, and this drives the year 1 set of domestic prices upward.</p> 
+            
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/09/price_stock.jpg"
+        width="734" height="444"
+        alt="FIGURE 1-B-8">
+        <p>FIGURE 1-B-8 Simulated Prices and Stocks with What If = Higher Global Production
+    </div>  
+
+    <p>If you prefer to use mathematics to develop your intuition for what if analysis, then equations (1) through (6) above can be very useful. For the current what if analysis which consists of a surge in year 2 export demand, we are raising the value of e in equation (2). All else equal, this raises the year 2 export price. Equation (4b) shows that because of the spatial LOP, the higher export price will result in a higher set of year 2 domestic prices. Equation (3) shows that according to the intertemporal LOP, higher year 2 domestic prices will cause the set of year 1 domestic prices to increase. In order for this to happen, equation (5) shows that there must be less consumption in year 1. According to equation (5), to achieve less consumption, there must be either more of the commodity exported or more placed into storage. The year 1 export price remains largely unaffected and so we should not believe there will be higher exports in year 1. We therefore conclude that more of the commodity will be placed into storage in year 1. </p>
+
+    <p>This is the point where the math version of the what if analysis gets tricky. In the paragraph above we concluded that the set of year 2 domestic prices increase with the announcement that year 2 export demand will surge higher. However, we also concluded that more stocks will flow out of year 1 and into year 2. Normally we associate higher stocks in year 2 with higher overall supply and thus a lower set of year 2 prices. It is important to keep in mind that indeed the stocks which flow into year 2 lowers the set of year 2 prices but only in relative terms. Specifically, the stock inflow dampens the rise in commodity prices that results from the export demand surge but it does not reverse the direction of the price impact.</p>
+    
+    <p>It should be obvious that this simulation model is not attempting to capture the size of the what if response in a realistic way. What is important is the direction of the response. For example, we do not expect U.S. domestic consumption to fall almost to zero in year 2 in response to a 20 percent increase in export demand. The model is robust in how it captures the direction of price and quantity changes but the fact that it uses linear supply and demand schedules implies that it is not robust regarding the size of the quantity and price responses.</p>
+
+    <p>You will have the opportunity in class to work through the other what if scenarios. Challenge yourself to ask what will happen to year 1 and year 2 consumption, exports, stocks and prices before changing the what if parameter(s) and observing the simulated results. This will force you to think through the various economics linkages. Keep in mind that it takes a lot of practice to become good at thinking through the various moving parts when predicting how the variables of interest will change when revised information about future supply and conditions is received. With sufficient practice you will be able to interpret the daily commodity price reports with this mental model in mind. And for those of you who are participating in the Stock Trak trading game, having knowledge of the various linkages concerning stocks, consumption, exports and prices will help you make informed and hopefully profitable trades in the commodity futures market. Speaking of futures markets, now that we understand how spot prices are determined it is time to use this same model to examine futures prices and how the relationship between spot and futures prices evolves over time. Stay tuned! 
+    </p>
+
+   
+
+</div>  <!-- End of Tab 1-->
+
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+
+<div id="Tab2" class="tabcontent">
+  <h1 style="color:purple;">Assignment Questions</h1>
+
+  <h3 style="color:blue;">Assignment questions are posted in Canvas.</h3>
+
+    
+
+</div>  <!-- End of Tab 3-->
+
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+
+<div id="Tab3" class="tabcontent">
+  <h1 style="color:purple;">Practice Questions</h1>
+
+  
+
+    <ol start="1"> 
+
+        <li><p>Review the USDA
+            <a href="https://downloads.usda.library.cornell.edu/usda-esmis/files/3t945q76s/nz806541q/6682x9431/latest.pdf" target="_blank">February, 2019 WASDE report </a>, which was released after trading on Friday, February 8th. Answer the following questions regarding how you believe commodity futures prices responded to the report on Monday, February 11, 2019.</p>
+        
+            <p>Based on information about the change in U.S. wheat stocks (first paragraph), the price of Wheat is expected to ________ (increase, decrease). The primary reason for lower U.S. corn production is __________ (lower yield, lower acreage). The change in U.S. ethanal use is expected to contribute toward a __________ (lower, higher) price of U.S. corn. The percent of global rice stocks held by China is estimated to be between _________ (40 - 50%, 50 - 60%, 60 - 70%).</p>
+        </li>         
+             
+        <li>
+            <p></p>Demand and supply schedules for sugar are given by Q<sup>D</sup> = a – bP and Q<sup>S</sup> = -&alpha;  + &beta; P, respectively. The market clears where demand is equal to supply. The four parameters (a, b, &alpha; and &beta;) all take on positive values. Suppose you receive private information that the b parameter will soon increase in value. To earn an expected profit you should</p>
+
+            <ol type="a">
+                <li>Take a long position in the sugar market and offset your position after the increase in b takes place and the market price has adjusted. </li>
+                <li>Take a short position in the sugar market and offset your position after the increase in b takes place and the market price has adjusted.</li>
+            </ol>
+        </li>
+            
+        <li>The U.S. is a net exporter of soybeans. Suppose you believe the U.S. dollar will appreciate over the next few weeks. To earn an expected profit you should:
+            <ol type="a">
+                <li>Take a long position in the soybean market and offset your position after the currency appreciation.  </li>
+                <li>Take a short position in the soybean market and offset your position after the currency appreciation.</li>
+            </ol>
+        </li>
+            
+        <li>Corn and soybeans are both used for animal feed. You have inside information that the USDA will soon announce that the corn harvest will be larger than previously anticipated. To earn an expected profit you should:  
+        
+        <ol type="a">
+            <li>Take a long position in the soybean market and offset your position after the USDA announcement and prices have fully adjusted.  </li>
+            <li>Take a short position in the soybean market and offset your position after the USDA announcement and prices have fully adjusted.</li>
+        </ol>
+
+        </li>
+
+
+        <li>You have inside information that China will soon unexpectedly raise the import tariff on U.S. soybeans and other U.S. products. To earn an expected profit you should: 
+
+        <ol type="a">
+            <li>Take a long position in the futures market for the U.S. dollar index and offset your position after China increases its tariffs and prices have adjusted.  </li>
+            <li>Take a short position in the futures market for the U.S. dollar index and offset your position after China increases its tariffs and prices have adjusted.</li>
+        </ol>
+            
+        </li>
+            
+        <li>In July of 2018 Scott Pruitt resigned as the director of the U.S. Environmental Protection Agency. Prior to his departure he had proposed a freeze on fuel economy standards, and weakened a number of environmental regulations including the mandated mixing of ethanol in gasoline. Suppose you heard of Pruitt’s unexpected departure before anyone else. To earn an expected profit you should: 
+
+        <ol type="a">
+                <li>Take a long position in corn futures and offset your position after Pruitt’s resignation is made public and prices have adjusted.  </li>
+                <li>Take a short position in corn futures and offset your position after Pruitt’s resignation is made public and prices have adjusted.</li>
+        </ol>
+
+        </li>
+            
+        <li>Suppose the USDA WASDE report indicates higher than expected production of corn and higher than expected overall useage of corn. How will the estimated stocks-to-use ratio be impacted by this announcement? 
+           
+            <ol type="a">
+                <li>The ratio will increase.  </li>
+                <li>The ratio will decrease.</li>
+                <li>The ratio may increase or decrease, depending on the relative sizes of the adjusted estimates of corn production and usage.</li>
+            </ol>
+        </li>
+    </ol>
+
+</div> <!-- End of Tab 4-->
+
+
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+
+<div id="Tab4" class="tabcontent">
+
+
+<h3>Useful Background Reading</h3>
+
+<p>The Supply of Storage<br>
+Author(s): Michael J. Brennan<br>
+Source: The American Economic Review, Vol. 48, No. 1 (Mar., 1958), pp. 50-72<br>
+<a href="other_1b/supply_storage_brennan.pdf">Click here for the paper</a>.</p>
+
+<p>Reviving the Competitive Storage Model: A Holistic Approach to Food Commodity Prices<br>
+IMF Working Paper, 2011<br>
+https://www.imf.org/external/pubs/ft/wp/2011/wp1164.pdf</p>
+
+
+    
+    
+     
+            
+</div>  <!-- End of Tab 5-->
+
+
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+
+<div id="Tab5" class="tabcontent">
+    <h1 style="color:purple;">Appendix</h1>
+    <p> There is no content for this appendix.</p>
+            
+</div>  <!-- End of Tab 5-->
+
+
+</div>
+
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
