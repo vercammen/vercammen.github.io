@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css">
+        .boxed {
+            border: 1px solid green ;
+            width: 450px;
+        }
+    </style>
+    <style>
+        p, li {max-width: 45em;}
+    </style>
+
+
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<!--START OF CSS CODE FOR TABS-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  /*color: white;*/
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Tab1 {background-color: white;}
+#Tab2 {background-color: white;}
+#Tab3 {background-color: white;}
+#Tab4 {background-color: white;}
+#Tab5 {background-color: white;}
+</style>
+</head>
+
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<!--START OF MAIN HTML CODE-->
+<body>
+        <h4 style="color:red;">Return to <a href="module1_select_page.html">Module Learning Outcomes</a> </h4>
+        <h2 style="color:green;">Module 1, Section C: Relationship Between Spot and Futures Prices</h2>
+
+<button class="tablink" onclick="openPage('Tab1', this, 'red')"id="defaultOpen">Main Content</button>
+<button class="tablink" onclick="openPage('Tab2', this, 'green')">Practice Questions (Long)</button>
+<button class="tablink" onclick="openPage('Tab3', this, 'blue')">Practice Questions (Short)</button>
+<button class="tablink" onclick="openPage('Tab4', this, 'orange')">Readings</button>
+<button class="tablink" onclick="openPage('Tab5', this, 'purple')">Appendix</button>
+
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+<!--CONTENT FOR "MAIN CONTENT" TAB-->
+
+<div id="Tab1" class="tabcontent">
+
+    <h1 style="color:purple;">Main Content</h1>
+
+    <h2 style="color:green;">Index</h2>
+
+    <ul>
+            <li><a href="#a001">Jump to SubSection (i): The Basis </a></li>
+            <li><a href="#a002">Jump to SubSection (ii): Case Study Assumptions</a></li>
+            <li><a href="#a003">Jump to SubSection (iii): Case Study Data Analysis</a></li>
+            <li><a href="#a004">Jump to SubSection (iii): The Forward Curve</a></li>
+        </ul>
+    
+      <p>Module 1.B focused on a generic market that treated futures and spot prices as equivalent. In this module the distinction between futures prices and spot prices is emphasized. Understanding the relationship between futures and spot prices is crucial for understanding price risk management (i.e., hedging), which is the topic of Module 1.D. In the first section of this module the focus is on the basis, which is simply the spot price minus the price of the next-to-expire futures contract. The second section sets up a case study of spot and futures prices and the basis at Kansas City, Missouri, which is a typical U.S. Midwest location. The third section examines the Kansas City basis data to determine the extent that it conforms to the theoretical model. In the last section of this module the futures price forward curve is examined. The forward curve provides a snapshot of expected future spot prices at a particular point in time. With the assumption of normal price expectations, there is an important connection between the slope for the forward curve and marginal carrying costs in the spot market. Stay tuned!  </p>
+      
+      <h3 style="color:rgb(128, 0, 0);"><a name="a001"></a>(i) The Basis</h3>
+       
+      <p> The main link between futures prices and spot prices is the basis. <b>The basis is defined as the spot price minus the futures price</b>. Each spot market has its own basis, and it is necessary to define the futures contract (e.g., December, 2020) when specifying a value for the basis. Normally, the price of the futures contract which is next to expire is used to calculate the basis. The value of the basis varies over space because the spot price in a particular region varies according to the cost of transporting the commodity to market. The value of the basis varies over time because as time progresses the cost of carrying the commodity until the expiry of the futures contract normally decreases. </p> 
+    
+      <p>To better understand the previous paragraph it is important to remember that futures contracts can be settled with physical delivery. Suppose the contract specifies that a short contract can be settled by delivering the commodity to location X. There are only a small number of locations which serve as a futures contract delivery point. To qualify, a location must generally serve the region as a delivery hub with low cost transportation access to the export terminals (e.g., train or barge). Assume that location X meets these qualifications.</p>
+          
+      <p>When delivery is made to location X, payment to the trader making the delivery is equal to the futures price specified on the contract plus a premium of D cents per bushel. The value for D will depend on the location of X relative to the CME headquarters in Chicago. Arbitrage ensures that when a futures contract is nearing its expiry date, the spot price at location X must equal the futures price plus D. If the spot price was lower, then a trader would simultaneously purchase the commodity in the spot market and take a short position. The next day the commodity would be delivered to fulfill the requirements of the futures contract and a positive profit would be earned. This positive profit would result in many traders doing a similar transaction, and that would result in the spot price being driven up and the futures price driven down until the spot price is equal to the futures price plus D. An analogous argument can be made when the spot price is above the futures price plus D but this time the arbitrage involves the use of a long futures contract.</p> 
+
+      <p>To make this more formal, let Spot(X,t) denote the spot price at location X at time t and let F(t,T) denote the futures price at time t for a contract which expires at date T. Given the assumptions in the previous paragraph it follows that: </p>
+      <br/>
+      <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p> Spot(X,t) = Futures(t,T) + D as t --> T</p>                  
+        </div>
+      </div>
+
+      <p>We know from Module 1B that arbitrage ensures that the expected value of Spot(X, T) is equal to Spot(X,t) + m<sub>t</sub>(T-t), where the m<sub>t</sub> is the marginal carrying cost measured in days and T - t is the number of days until the futures contract expires [It is important to keep in mind the distinction between the marginal carrying cost, m<sub>t</sub>, and the overall carrying cost m<sub>t</sub>(T - t)]. We also know that with normal price expectations, the futures price is equal to the expected value of the location adjusted spot price at the point in time that the futures contract expires. Using math we have: E{Spot(X,T)} = Spot(X,t) + m<sub>t</sub>(T-t) and F(t,T) = E{Spot(X,T)} - D. Substituting give us:</p>
+      <br/> 
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+                <p> F(t,T) = Spot(X,t) + m<sub>t</sub>(T-t) - D </p>                  
+        </div>
+    </div>
+    <br/> 
+    <p>Now consider the spot price at an upstream location Y, where Y is linked to downstream location X via truck, rail or barge transport. To keep things simple, assume that the cost of transporting the commodity from location Y to location X is fixed at  Z cents per bushel. Arbitrage in the spot market will ensure that the spot price at location Y is equal to the spot price at location X minus Z. More formally, Spot(Y,t) = Spot(X,t) - Z. Solve this equation for Spot(X,t) and substitute into the equation in the previous text box to get F(t,T) = Spot(Y,t) + Z + m<sub>t</sub>(T-t) - D. </p>
+        
+    <p>Let B(Y, t, T) denote the time t basis at location Y relative to a futures contract which expires at time T. Using the previous expression we have:   </p>
+    <br/> 
+    <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+        <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">
+            <p> B(Y,t,T) = Spot(X,t) - F(t,T) = -m<sub>t</sub>(T-t) - (Z - D) <p>                  
+        </div>
+    </div>
+
+    <p>The previous equation shows that if the cost of transporting the commodity from location Y to location X, as measured by Z, is relatively large such that Z - D > 0, then the basis takes on a negative value. The basis can be decomposed into the time dependent carrying cost component, -m<sub>t</sub>(T-t), and the time invariant location adjustment component, -(Z - D). If Z is not large such that Z - D < 0 then the basis will switch from a negative sign to a positive sign as the expiry date of the futures contract nears.  </p>
+
+      <br/> 
+       
+      <blockquote><font size="4">Time Path for Basis</font> </blockquote>      
+
+      <p>For now assume that the adjustment for location is fixed over time. This assumption would be reasonable if the cost of transporting the commodity per bushel did not depend on the supply and demand for transportation services. In reality, the supply is approximately fixed and the demand varies widely, ranging from very high shortly after harvest to very low in the period just prior to harvest. Thus, we should expect seasonality in the adjustment for location. This seasonality is ignored for now and is briefly revisited in the next section. If we also assume that m<sub>t</sub> is constant over the T - t time interval, then the carry cost component of the basis can be written as m(T - t). This shows that the basis decreases linearly over time and reaches zero when the futures contract expires at date T. The above definition for basis shows that when the futures contract expires the basis is equal to the adjustment for location.</p>
+      
+      <p> How is the basis defined at the Gulf Coast, which serves as the U.S. export location? We can use the same formula but now Z takes on a negative value because the spot price at the Gulf Coast is higher rather than lower than the spot price at location X. For the Gulf Coast, Z - D clearly takes on a negative value, and so the adjustment for location takes on a negative value. With this in mind, the value of the basis for the Gulf Coast, B(Y, t, T) = -[Z - D + m<sub>t</sub>(T - t)], is clearly positive when the futures contract expires. If the carrying cost parameter, m, and the time span, T - t, are both large then it is possible that the basis at the Gulf Coast takes on a negative value. However, this is generally not the case and so the basis is at the Gulf Coast generally takes on a comparatively large positive value regardless of the time left until the futures contract expires.   </p>
+   
+      <p>The remainder of this analysis focuses on location Y, which is assumed to be in the U.S. Midwest, upstream from a major grain transportation hub. Also assume Z > D, which means that the transportation cost between Y and X is relatively large. For this location, the carrying cost and location components of the basis, and the convergence of the spot and futures price to differential Z - D at date T are illustrated in Figure 1-C-1. Keep in mind that the gap between the futures price and the spot price which is identified in Figure 1-C-1 is the negative of the basis. Over time the absolute basis decreases but the actual basis is increasing over time because it is becoming less negative. Also keep in mind that the schedules in Figure 1-C-1 represent expected prices as of date t. Actual prices will bounce around in response to the arrival of new information but the despite the changes in the spot and futures prices, the basis is expected to be relatively stable over time.</p>
+
+      <br/>
+          <div class=figure>
+              <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/basis_time_paths.jpg"
+                width="752" height="463"
+                alt="FIGURE 1-C-1">
+              <p>Figure 1-C-1: Basis Time Path for Location Y 
+          </div>
+    
+      <p>
+
+      <blockquote><font size="4">Seasonality in the Basis</font> </blockquote>
+      </p>
+      <p> Figure 1-C-1 is an appropriate model of the time path of the basis over relatively short periods of time (e.g., 60 days) but it is not appropriate for long time spans (e.g., 10 months) because it fails to account for seasonality. The blue columns in Figure 1-C-2 are the set of simulated base case cash prices, which were derived in Module 1-B-2. Recall that as stocks diminish over the course of the marketing year, the marginal cost of storage decreases and marginal convenience yield increases. These shifts cause the spot price to initially increase but to eventually decrease throughout each of the two marketing years. The blue coloured columns in Figure 1-C-1 show this annual cycling of the spot price. Suppose there is only one futures contract which trades expires in Q7, and the basis for quarter t is defined as the quarter t cash price minus the Q7 futures price. The implicit assumption is that there is no adjustment for location because in Q7 there is a full convergence between the futures price and the spot price.</p>
+        
+      <p> From the perspective of a trader in Q1, the set of basis values, expressed in absolute value, are given by height of the orange columns in Figure 1-C-2. Between Q1 and Q3, and between Q5 and Q7, the absolute basis decreases over time in an approximate linear fashion, which is consistent with the linear time path in Figure 1-C-1. However, between Q3 and Q5 the absolute basis increases rather than decreases over time, which is not consistent with the theoretical time path of the basis which is shown in Figure 1-C-1. This seasonal pattern repeats in the quarter preceding and the quarter following each harvest period. An absolute basis which increases over time is typically associated with an inverted market. For example, if the futures contract traded in Q5 then Figure 1-C-2 would show that the Q5 futures price trades below the Q4 spot price, thus satisfying the definition of an inverted market. Similarly, if futures contracts traded in both Q4 and Q5 then from the perspective of a trader in Q3, the price of the Q5 contract trades below the cost of the Q4 contract, which once again satisfies the definition of an inverted market.</p>
+
+      <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/simulated_basis.jpg"
+              width="728" height="437"
+              alt="FIGURE 1-C-2">
+            <p>Figure 1-C-2: Simulated Corn Basis When no Adjustment for Location is Required 
+        </div>
+      <br/>
+          
+      <p>It is also important to ask how the individual basis and the seasonal pattern in the basis is impacted by an information shock such as a Q1 USDA announcement that the size of the year 2 harvest is 20 percent larger than expected. This scenario is illustrated in Figure 1-C-3. To simplify the analysis assume there are two futures contract which trade: one in Q3 and one in Q7. We are once again looking at the problem from the perspective of Q1. The Q1 basis is measured relative to the Q3 contract and before the information shock it is implied by -A. Similarly, the Q5 basis is measured relative to the Q7 futures contract and before the information shock it is implied by -C.  As is expected, the announcement of a higher than expected year 2 harvest causes the full set of spot prices to decrease from the blue coloured columns to the orange coloured columns. Notice that the Q1 basis decreases in absolute value value because the Q3 futures price drops by more than the Q1 spot price. This is known as a strengthening basis. In contrast, the Q5 basis increases in absolute value because the Q5 spot price decreases by more then the decrease in the Q7 futures price. This is known as a weakening basis. In both cases the absolute change in the basis is less than the absolute change in the spot price. In the next section on hedging, this outcome is central to our analysis of managing price risk.</p>   
+
+    <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/basis_newinfo.jpg"
+              width="728" height="437"
+              alt="Figure 1-C-3">
+            <p>Figure 1-C-3: Spot prices for Base Case and with Year 2 Harvest 20% Higher than Expected. 
+        </div>
+    <br/>
+          
+    <h3 style="color:rgb(128, 0, 0);"><a name="a002"></a>(ii) Assumptions for Case Study</h3>
+
+      <p>In the previous section the focus was on upstream location Y and central transportation hub X. The cost of transporting the commodity between X and Y was assumed to be fixed at Z per bushel. The futures contract specified that those who wish to deliver the commodity to fulfull the requirements of a short position must deliver it to location X, and upon doing so will be paid the futures price specified in the contract plus a premium of size D. Arbitrage in this generic market ensures that as the futures contract is about to expire the difference between the futures price and spot price converges toward -D at location X and Z - D at location Y. Prior to expiry the carrying charge m(T - t) further separates the futures price and the spot price at both locations.</p>
+
+      <p>The purpose of this section is to identify a real world scenario which matches this stylized market structure. In the following section pricing data from the real world scenario is examined to assess the extent that the theoretical relationships can be observed in the real world market outcomes. To develop this scenario it is important to understand that a sizeable fraction of the grain which is exported from the U.S. Midwest is transported by barge down the Mississippi River to export terminals along the U.S. Gulf Coast. St. Louis Missouri is an important transportation hub which is situated on the Mississippi River. Grain from various primary Midwest collection points arrives in St. Louis by river barges on the Missouri River, rail and truck, and is then transferred to barges on the Mississippi River and floated to the U.S. Gulf Coast for export. Figure 1-C-4 is a map which shows the position of St. Louis at roughly the midpoint of the Mississippi River.   </p>
+
+      <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/mississippi_river.jpg"
+              width="712" height="511"
+              alt="FIGURE 1-C-4">
+            <p>Figure 1-C-4: St Louise Missouri and the Mississippi River. 
+        </div>
+      <br/>
+        
+      <p>Given it status as a major transportation hub, St. Louis is a good candidate for location X in our stylized model. This is particularly true because St. Louis is a designated delivery point for settling corn futures contracts. Corn futures trade in the Chicago Mercantile Exchange (CME) and because of this the default delivery point for corn futures is Chicago. However, since very little corn moves from the U.S. Midwest to the export elevators on the Great Lakes near Chicago, the CME has a number of other delivery location, including St. Louis. Figure 1-C-5 shows the various alternative delivery locations and the price premiums and discounts which are used to adjust the futures price when determining the contract settlement price. At the bottom of the list is St Louis. Notice that the premium applied to corn delivered to St. Louis rather than Chicago is 16.25 cents/bushel. This means that we can use St. Louis as location X and set D = 0.01625 in our styled model.</p>
+
+      <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/corn_delivery_locations.jpg"
+              width="806" height="421"
+              alt="Figure 1-C-5">
+            <p>Figure 1-C-5: Premiums and Discounts for Alternative Futures Market Delivery Locations. 
+        </div>
+      <br/>
+
+      <p>Next consider upstream location Y. What is needed is a primary corn collection point which uses St. Louis as a transportation hub when exporting corn to the Gulf Coast. The Missouri River flows into St. Louis from the west and so a good candidate is a city west of St. Louis which is located on the Missouri River. Given these considerations, an ideal candidate for location Y is Kansas City, Missouri. Figure 1-C-5 shows Kansas City, St. Louis and the Missouri River. Grain that is shipped from Kansas City to St. Louis moves by either barge down the Missouri River or by train. A recent estimate of the cost of shipping corn by barge from Kansas City to St Louis is not available. A detailed <a href="https://https://pdfs.semanticscholar.org/0220/b1c7305b2bfae04302782f6c809ef8e5602e.pdf" target="_blank">study</a> in 1978 shows that in 1973 the cost of shipping grain from Kansas City to St Louise by barge is equal to $2.76 per ton. There are 39.6 bushels in a ton, and so this barge cost works out to $0.070 per bushel. To adjust this cost for inflation, a table of the historic consumer price index (CPI) for the U.S. shows that prices in 2020 are on average 5.80 times as high as they were in 1973. Thus, a crude estimate of the cost of shipping corn from Kansas City to St. Louis by barge in 2020 is 0.070*5.80 = 0.408 per bushel. Thus, the estimate of Z that we will use for our case study is Z = 0.41. </p>.
+        
+      <br/>
+        <div class=figure>
+          <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/kansas_city_map.jpg"
+            width="960" height="272"
+            alt="Figure 1-C-6">
+          <p>Figure 1-C-6: Kansas City and the Missouri River. 
+        </div>
+      <br/>
+
+      <h3 style="color:rgb(128, 0, 0);"><a name="a003"></a>(iii) Analyzing the Case Study Data</h3>
+
+      <p>The USDA collects daily basis estimates at important primary delivery locations throughout the U.S. Midwest. This <a href="https://www.marketnews.usda.gov/mnp/ls-report-config?category=Grain+Basis" target="_blank">database</a> was used to retrieve the daily basis for corn at Kansas City over the years 2006 - 2020. Figure 1-C-7 reports the summary statistics for the March, May and July contracts, and Figure 1-C-8 reports the results for the September and December contracts. Each of the five contracts was used to calculate the basis over an approximate 70 day span. For example, the March contract is used when the December contract nears its expiry in early December, and it is continued to be used until the March contract approaches its expiry in early March. Each contract has three columns: "First", "Last" and "Avg Chg". The First column shows the Kansas City Basis on the first day the contract was used to calculate the basis. The Last column shows the Kansas City Basis on the last day the contract was used to calculate the basis. The Avg Chg column shows the average change in the basis between when it was first used and last used, expressed on a per month basis. For example, in March of 2018 the first basis value reported in early December of 2017 was -$0.23/bu, and the last basis value reported in early March of 2018 was $0.13/bu. The average change in the basis over this time period works out to approximately $0.055/bu per month.</p>
+
+    <br/>
+      <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/basis_data_a.jpg"
+          width="884" height="492"
+          alt="Figure 1-C-7">
+        <p>Figure 1-C-7: Summary of Kansas City Basis Data: March, May and July Contracts. 
+      </div>
+    <br/>
+
+    <br/>
+      <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/basis_data_b.jpg"
+          width="702" height="587"
+          alt="Figure 1-C-8">
+        <p>Figure 1-C-8: Summary of Kansas City Basis Data: September and December Contracts.
+      </div>
+    <br/>
+
+      <p>We can learn a lot from the data in the First, Last and Avg Chg colums of Figures 1-C-7 and 1-C-8. First, most of the basis values are negative, which means that the Kansas City spot price tends to be below the corresponding futures price. Second, the values in the First column are generally more negative than the values in the Last column, which implies that the basis is decreasing in absolute value as we get closer to the expiry of the contract. This is consistent with Figure 1-C-1 which shows that due to a declining cost of carry, the size of the absolute basis decreases over time. For the particular case of the March 2018 contract, the average per month decrease in the size of the basis, which was calculated to equal $0.055 per bushel per month, is an estimate of the marginal carrying cost, expressed on a monthly basis. If these estimates in the Avg Chg column were averaged over all contracts and all years, the final value, which appears to be in the range of $0.06 to $0.07 per bushel per month, would be a good estimate of the parameter m in the stylized model. Our theory predicts that the average decrease in the value of the basis over the life of the contract is negatively related to the price of the commodity. This is because when stocks are plentiful, the marginal cost of storage will be high and convenience yield will be low, thus resulting in a relatively rapid decrease in the size of the basis over the life of the contract. At the same time, plentiful stocks will result in a relatively low price for the commodity.  </p>
+
+      <p>The September contract has a negative rather than a positive average change in the basis. The reason for this is that data is heavily skewed by highly unusual basis values in the years 2011 to 2014. During these years the Kansas City spot price over the June to August period was well above the price of a September futures contract, thus resulting in large positive values for the Kansas City basis. Moreover, over the life of the contract, the spot price decreased rather than increased relative to the futures price. This resulted in a weakening basis rather than a strengthening basis - an outcome which is not consistent with the theory presented above. For the other contracts (March, May, July and December) the basis values were also unusual during the 2012 - 2013 period. To eliminate the impact of these outliers on the average values across years, the bottom row of Figures 1-C-7 and 1-C-8 show the average values with the years 2010 - 2014 excluded. It is beyond the scope of this module to explain the highly unusual basis during the 2010 - 2014 period other than to note that commodity prices spiked during this period to record high levels.  </p>
+
+      <p>The values in the last row and the Last column in Figures 1-C-7 and 1-C-8 show the average value of the basis when the futures contract is close to expiring. Notice that there is little variation in this value across the five different futures months. Specifically, the average value is in the range of -15 to -20 cents per bushel. Our theory indicates that when the futures contract expires the basis will converge toward Z - D cents per bushel. This means that for our case study an estimate of Z - D is in the range of -15 to -20 cents per bushel. Based on the CME contract specification for corn, D is approximately 16 cents per bushel. This implies that Z is in the range of 31 to 36 cents per bushel. We previously used inflation adjusted data to estimate Z at 41 cents per bushel. While not exact, our two estimates of Z are similar. The difference may be due to a rate of inflation in the cost of barge services that is lower than the rate of inflation that is implied by the CPI. Overall, the ending basis values which are implied by Figures 1-C-7 and 1-C-8 appear to be reasonably consistent with economic theory.   </p>
+
+      <p>The last feature of Figures 1-C-7 and 1-C-8 to examine is the seasonality in the basis. Using the data in the bottom row, notice that the average value of the First column is equal to 19.78 for the December contract, -17.80 for the March contract, -15.20 for the May contract, -16.30 for the July contract and -14.50 contract. With the exception of the July contract, the average basis at the beginning of each contract is decreasing in absolute value as we progress from the first post harvest contract in December through to the last pre-harvest contract in July. This outcome is consistent with theory, which stipulates that the marginal carrying cost is highest in the period immediately following harvest, and it steadily declines throughout the remainder of the marketing year.</p>
+
+    </br>  
+
+      <h3 style="color:rgb(128, 0, 0);"><a name="a004"></a>(iv) The Forward Curve</h3>
+
+      <p>By now it should be clear that there are two distinct dynamic considerations in the study of futures markets. The first focuses on price paths such as how do we expect the spot price for the commodity or the price of a particular futures contract (e.g., December 2020) or the basis to change over time. The second is a snapshot of all relevant prices at a given point in time. The previous section focused on the time path feature of commodity prices. This section will focus on the snapshot feature of commodity prices. On a particular day we can get a snap shot of the current spot price, the nearby futures price, the spot price minus the nearby futures price (i.e., the basis) and the full set of more distant future prices. In the previous section we considered a snapshot of the spot price and the basis at a particular point in time. For example, we determined that the basis is likely to be more negative in the period following harvest as compared to the period preceding harvest. For the remainder of this section we will focus on the snapshot of the set of futures prices at a particular point in time. If this snapshot of futures prices was graphed, the resulting schedule is what we call the forward curve.  </p>
+
+      <blockquote><font size="4">The Forward Curve with Simulated Prices</font> </blockquote>
+
+      <p>In order to model the forward curve within our simulation model we need to make an assumption about price expectations. For now we will assume that traders have normal price expectations. This means that regardless of the expiry date of the contract (e.g., three months from now versus 18 months from now) we assume that the futures price is equal to the expected value of the spot price when the futures contract expires, adjusted for location. Later in the analysis we will relax this assumption and assume that futures prices my be biased down (in the case of normal backwardation) or biased up (in the case of contango). Normal price expectations necessarily implies that we do not expect the price of a particular futures contract to systematically increase of decrease over time. We know that futures prices will increase or decrease with the arrival of new information but at a given point of time when all of the information has been incorporated into the full set of prices, we have no reason to expect that the futures price will be either higher or lower in one months time. This is very different that the spot price because here we expect the cash price to increase by the carrying charge.</p>
+
+      <p>The base case simulation results are presented in Figures 1-C-9 and 1-C-10. In both figures there is no location adjustment and thus there is complete convergence of the spot price and the futures price when the futures contract expires. To interpret Figure 1-C-9 assume that it is October 15, 2020 and Q1 of year 1 has just started. The horizontal axis represents time and so we are looking forward and analying how we expect prices to change over time. As of October 15, 2020 there are three contracts which are trading with expiry dates Spring 2021, Fall 2021 and Spring 2022. The futures prices are the expected values of the spot prices when the contracts expire and thus the height of the Spring 2021 column is a measure of the futures price for the Spring 2021 contract as of October 15, 2020. Similarly, the heights of the Fall 2021 and Spring 2022 columns are measures of the corresponding futures prices as of October 15, 2020. The main feature of Figure 1-C-9 is that it shows that the price of the Spring, 2021 futures contract is expected to remain constant between October 15, 2020 and when the contract expires. Of course we know the prices will change with the arrival of new information but as of October 15, 2020 we do not expect the price of the Spring 2021 contract to change from month to month. </p>
+
+      <br/>
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/forward_curve_a.jpg"
+              width="580" height="350"
+              alt="FIGURE 1-C-9">
+            <p>Figure 1-C-9: Expected Time Path of Spring, 2021 Futures Contract, Beginning October 15, 2020. 
+        </div>
+      <br/>
+
+      <p>Figure 1-C-10 is the simulated forward curve on one particular day, in this case October 15, 2020. The forward curve shows the prices for all of the contracts which are trading on October 15, 2020. With normal price expectations, there is a one-to-one relationship between the forward curve and the expected time path for the spot prices. In some literature the forward curve is referred to as the term structure of futures prices. The forward curve shows the spread in futures prices at a particular point in time. For example, the spread between the Fall 2021 futures price and the Spring 2022 futures price is equal to $3.79 - $3.60 = $0.19/bu. The assumption of normal price expectations implies that the carrying charge between Fall 2021 (Q5) and Spring 2022 (Q7) is also equal to $0.19/bu. This important concept is worth emphasizing.</p>
+
+      <br/>
+        <div style="margin-left: 20px; margin-right: 700px; background-color: #0404B4;">
+            <div style="position: relative; top: -10px; left: -10px; padding: 10px; background: #CCFFFF; border: 2px solid #0404B4;">       
+                 <p> With normal price expectations, the slope of the forward curve is a measure of expected carrying costs in the spot market.</p> 
+                  
+            </div>
+          </div>
+    <br/>
+
+      <br/>
+      <div class=figure>
+          <p><img src="http://blogs.ubc.ca/jvercammen/files/2020/08/forward_curve_b.jpg"
+            width="580" height="350"
+            alt="FIGURE 1-C-10">
+          <p>Figure 1-C-10: Forward Curve as of October 15, 2020 
+      </div>
+    <br/>
+
+    <blockquote><font size="4">The Forward Curve with Real World Prices</font> </blockquote>
+
+      <p>It is also useful to examine real-world forward curves and spreads in futures prices. Figure 1-C-11 shows the July 12, 2019 settle prices for the full set of CBOT corn contracts that span July, 2019 to July, 2021. The graph of these prices, which is the forward curve, is given by Figure 1-C-12. Is the shape of this forwad curve consistent with theory? The answer is partially. Looking forward in time from July, 2019 the forward curve behaves as expected for the 2020 crop year. Specifically, the price of the September 2020 contract is much lower than the price of the July 2020 contract due to the arrival of newly harvested corn stocks in the fall of 2020. The contract prices for the subsequent months are progressively higher to reflect the positive marginal carrying charge in the post harvest period.  </p>
+      
+      <br/>
+        
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/cbot_settle_july12.jpg"
+              width="719" height="371"
+              alt="Figure 1-C-11">
+            <p>Figure 1-C-11: July 12, 2019 CBOT Corn Futures Prices 
+          </div>
+    
+      <p>One would expect the forward curve to have a similar shape for the 2019 contracts. Instead, we see that the contract prices do not drop to reflect newly harvested stocks in the fall of 2019. A likely explanation for this outcome is that corn inventory was relatively plentiful in 2019 and so the carry over from 2019 to 2020 was relatively large. Because of this large carry over, the marginal carrying cost remained positive throughout the fall of 2019. Prices are lower in 2020 than the analogous prices in 2020, which likley means that the 2020 production turned out to be larger than expected. That is, there was no need to carry over the large inventory from 2019 but this only became known after the fact.</p>
+    
+    <div class=figure>
+        <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/07/cbot_forward_july12.jpg"
+          width="530" height="350"
+          alt="FIGURE 1-C-12">
+        <p>FIGURE 1-C-12: July 12, 2019 CBOT Corn Forward Curve 
+      </div>
+    
+      <p> The outcome that the forward curve for storable agricultural commodities can slope up for multiple contract expiry dates is unique to agricultural commodities. The positive slope reflects the positive carrying charge, and this charge can be sizeable when the crop inventory is large and storage space is limited. In contrast, prior to the onset of COVID-19 the market for crude oil has a relatively flat, and possibly downward sloping forward curve with no obvious seasonality. Indeed, the left panel in Figure 1-C-3 shows that the forward curve for soybeans as of April 17, 2019 rises from a low of $8.7875/bu for the May, 2019 futures to a high of $9.4950/bu for the November, 2020 futures. In contrast, the right panel of Figure 1-C-3 shows that the forward curve for crude oil is flat and even declines over the May, 2019 to November, 2020 time period.
+    
+        </p> 
+    
+        <div class=figure>
+            <p><img src="http://blogs.ubc.ca/jvercammen/files/2019/04/forward_soy_oil.jpg"
+              width="580" height="480"
+              alt="FIGURE 1-C-3">
+            <p>FIGURE 1-C-3: Forward Curves for Soybeans and Crude Oil
+          </div>
+    
+          
+
+</div>
+
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+<!--CONTENT FOR "ASSIGN QUESTIONS" TAB-->
+
+<div id="Tab2" class="tabcontent">
+    <h1 style="color:purple;">Practice Questions (Long)</h1>
+
+<p>The practice questions for this module are currently being developed. </p>   
+
+    
+
+</div>
+
+
+
+
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+<!--CONTENT FOR "QUIZ PREP QUESTIONS" TAB-->
+
+<div id="Tab3" class="tabcontent">
+
+    <h1 style="color:purple;">Practice Questions (Short)</h1>
+
+<p>The practice questions for this module are currently being developed. </p>  
+
+    
+</div>
+
+
+
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+<!--CONTENT FOR "READINGS" TAB-->
+
+<div id="Tab4" class="tabcontent">
+
+    <h3>Useful Background Reading</h3> 
+
+    <p>An Introduction to Basis<br>
+    Authors: Joe Parcell and Jason Franken<br>
+    https://extension2.missouri.edu/G606</p>
+
+
+    <p>The Dynamics of Commodity Spot and Futures Markets: A Primer<br>
+    Author: Robert Pyndyck<br>
+    http://ceepr.mit.edu/files/papers/Reprint_155_WC.pdf</p>
+      
+</div>
+
+
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+<!--CONTENT FOR "APPENDIX" TAB-->
+
+<div id="Tab5" class="tabcontent">
+
+        <h1 style="color:purple;">Appendix</h1>
+
+    <p>No Appendix for Module 1-C</p>
+  </div>
+
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<!--JAVA SCRIPT-->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
